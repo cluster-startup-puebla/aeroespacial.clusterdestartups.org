@@ -1,0 +1,21 @@
+{
+  "Nav": {
+    "label": "Navegación principal",
+    "home": "Inicio",
+    "blog": "Blog",
+    "calendario": "Calendario",
+    "open": "Abrir menú",
+    "close": "Cerrar menú",
+    "skipToContent": "Saltar al contenido"
+  },
+  "Footer": {
+    "name": "Clúster Aeroespacial",
+    "tagline": "Ecosistema de startups, industria y academia del sector aeroespacial.",
+    "links": "Enlaces",
+    "madeIn": "Hecho en Puebla, México.",
+    "home": "Inicio",
+    "blog": "Blog",
+    "calendario": "Calendario",
+    "language": "Idioma"
+  }
+}

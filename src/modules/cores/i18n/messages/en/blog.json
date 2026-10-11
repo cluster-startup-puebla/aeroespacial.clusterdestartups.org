@@ -1,0 +1,13 @@
+{
+  "Blog": {
+    "title": "Blog",
+    "metaTitle": "Aerospace ecosystem blog",
+    "description": "Notes on startups, industry and academia in the aerospace sector.",
+    "backToBlog": "← Back to the blog",
+    "readingTime": "{minutes} min read",
+    "readMore": "Read more →",
+    "empty": "There are no posts in this category yet.",
+    "relatedTitle": "Notes you may like",
+    "untitled": "Untitled"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "Home": {
+    "metaTitle": "Aerospace Cluster — startups, industry and academia",
+    "metaDescription": "Aerospace Cluster space: calls, ecosystem news and the aerospace events calendar.",
+    "hero": {
+      "eyebrow": "Aerospace Cluster",
+      "title": "The aerospace ecosystem, in one place",
+      "description": "News, calls and events for startups, industry and academia in the aerospace sector.",
+      "primaryCta": "See the calendar",
+      "secondaryCta": "Read the blog"
+    },
+    "posts": {
+      "eyebrow": "Blog",
+      "title": "Latest notes",
+      "description": "The most recent news from the aerospace ecosystem.",
+      "cta": "See all notes"
+    },
+    "events": {
+      "eyebrow": "Calendar",
+      "title": "Upcoming events",
+      "description": "Meetups, congresses and open calls.",
+      "cta": "Open the calendar"
+    },
+    "closing": {
+      "title": "Are you organizing an aerospace event?",
+      "description": "Share it so it shows up in the cluster calendar.",
+      "cta": "See the calendar"
+    }
+  }
+}

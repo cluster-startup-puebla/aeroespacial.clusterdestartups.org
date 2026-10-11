@@ -1,0 +1,15 @@
+{
+  "Calendario": {
+    "title": "Calendario",
+    "metaTitle": "Calendario de eventos aeroespaciales",
+    "description": "Meetups, congresos y convocatorias del ecosistema aeroespacial.",
+    "upcomingTitle": "Próximos eventos",
+    "empty": "No hay eventos programados por ahora.",
+    "prevMonth": "Mes anterior",
+    "nextMonth": "Mes siguiente",
+    "hasEvents": "eventos",
+    "location": "Sede",
+    "details": "Más información",
+    "today": "Hoy"
+  }
+}

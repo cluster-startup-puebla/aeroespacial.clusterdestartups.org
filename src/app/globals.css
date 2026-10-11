@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+/* Clúster Aeroespacial — tokens Tailwind v4 (CSS-first).
+   Estilo 100% Tailwind: sin clases de componente propias; solo utilities
+   y `@utility` para las dos excepciones (container-site, article-body).
+   Paleta de marca, modo oscuro y fuentes reales llegan después (ver AGENTS.md). */
+
+:root {
+  --bg-base: #ffffff;
+  --bg-subtle: #f9fafb;
+  --bg-elevated: #ffffff;
+  --border-default: #e5e7eb;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-muted: #9ca3af;
+  --text-on-brand: #ffffff;
+  --link: #111827;
+  --accent: #111827;
+  --on-accent: #ffffff;
+}
+
+@theme inline {
+  --color-surface: var(--bg-base);
+  --color-surface-subtle: var(--bg-subtle);
+  --color-elevated: var(--bg-elevated);
+  --color-line: var(--border-default);
+  --color-ink: var(--text-primary);
+  --color-ink-secondary: var(--text-secondary);
+  --color-ink-muted: var(--text-muted);
+  --color-on-brand: var(--text-on-brand);
+  --color-link: var(--link);
+  --color-brand: var(--text-primary);
+  --color-accent: var(--accent);
+  --color-on-accent: var(--on-accent);
+
+  --font-display: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --text-display: 3.5rem;
+  --text-display--line-height: 1.05;
+  --text-display--font-weight: 700;
+
+  --text-h1: 2.5rem;
+  --text-h1--line-height: 1.1;
+  --text-h1--font-weight: 700;
+
+  --text-h2: 2rem;
+  --text-h2--line-height: 1.15;
+  --text-h2--font-weight: 700;
+
+  --text-h3: 1.5rem;
+  --text-h3--line-height: 1.25;
+  --text-h3--font-weight: 600;
+
+  --text-h4: 1.25rem;
+  --text-h4--line-height: 1.3;
+  --text-h4--font-weight: 600;
+
+  --text-body-lg: 1.125rem;
+  --text-body-lg--line-height: 1.6;
+
+  --text-body: 1rem;
+  --text-body--line-height: 1.6;
+
+  --text-small: 0.875rem;
+  --text-small--line-height: 1.5;
+
+  --text-micro: 0.75rem;
+  --text-micro--line-height: 1.4;
+}
+
+@utility container-site {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 1280px;
+  padding-inline: 1rem;
+
+  @media (min-width: 640px) {
+    padding-inline: 1.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    padding-inline: 2rem;
+  }
+}
+
+@utility article-body {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+
+  & > * + * {
+    margin-top: 1.25rem;
+  }
+
+  & h2 {
+    margin-top: 2.5rem;
+    font-size: 1.5rem;
+    line-height: 1.25;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  & h3 {
+    margin-top: 2rem;
+    font-size: 1.25rem;
+    line-height: 1.3;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  & a {
+    color: var(--text-primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  & strong {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+
+  & ul {
+    list-style: disc;
+    padding-left: 1.25rem;
+  }
+
+  & ol {
+    list-style: decimal;
+    padding-left: 1.25rem;
+  }
+
+  & blockquote {
+    border-left: 3px solid var(--border-default);
+    padding-left: 1rem;
+    color: var(--text-muted);
+  }
+
+  & figure {
+    overflow: hidden;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-default);
+  }
+
+  & figcaption {
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+  }
+}

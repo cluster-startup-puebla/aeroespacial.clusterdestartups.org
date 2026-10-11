@@ -1,0 +1,15 @@
+{
+  "Calendario": {
+    "title": "Calendar",
+    "metaTitle": "Aerospace events calendar",
+    "description": "Meetups, congresses and calls from the aerospace ecosystem.",
+    "upcomingTitle": "Upcoming events",
+    "empty": "There are no scheduled events right now.",
+    "prevMonth": "Previous month",
+    "nextMonth": "Next month",
+    "hasEvents": "events",
+    "location": "Venue",
+    "details": "More information",
+    "today": "Today"
+  }
+}

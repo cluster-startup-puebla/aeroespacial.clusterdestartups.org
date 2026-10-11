@@ -1,0 +1,30 @@
+{
+  "Home": {
+    "metaTitle": "Clúster Aeroespacial — startups, industria y academia",
+    "metaDescription": "Espacio del Clúster Aeroespacial: convocatorias, notas del ecosistema y el calendario de eventos aeroespaciales.",
+    "hero": {
+      "eyebrow": "Clúster Aeroespacial",
+      "title": "El ecosistema aeroespacial, en un solo lugar",
+      "description": "Noticias, convocatorias y eventos para startups, industria y academia del sector aeroespacial.",
+      "primaryCta": "Ver el calendario",
+      "secondaryCta": "Leer el blog"
+    },
+    "posts": {
+      "eyebrow": "Blog",
+      "title": "Últimas notas",
+      "description": "Lo más reciente del ecosistema aeroespacial.",
+      "cta": "Ver todas las notas"
+    },
+    "events": {
+      "eyebrow": "Calendario",
+      "title": "Próximos eventos",
+      "description": "Meetups, congresos y convocatorias a venir.",
+      "cta": "Abrir el calendario"
+    },
+    "closing": {
+      "title": "¿Organizas un evento aeroespacial?",
+      "description": "Compártelo para que aparezca en el calendario del clúster.",
+      "cta": "Ver el calendario"
+    }
+  }
+}

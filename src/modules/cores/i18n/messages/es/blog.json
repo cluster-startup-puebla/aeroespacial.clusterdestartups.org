@@ -1,0 +1,13 @@
+{
+  "Blog": {
+    "title": "Blog",
+    "metaTitle": "Blog del ecosistema aeroespacial",
+    "description": "Notas sobre startups, industria y academia del sector aeroespacial.",
+    "backToBlog": "← Volver al blog",
+    "readingTime": "{minutes} min de lectura",
+    "readMore": "Leer más →",
+    "empty": "No hay publicaciones en esta categoría todavía.",
+    "relatedTitle": "Notas que te pueden interesar",
+    "untitled": "Sin título"
+  }
+}

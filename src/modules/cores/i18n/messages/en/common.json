@@ -1,0 +1,21 @@
+{
+  "Nav": {
+    "label": "Main navigation",
+    "home": "Home",
+    "blog": "Blog",
+    "calendario": "Calendar",
+    "open": "Open menu",
+    "close": "Close menu",
+    "skipToContent": "Skip to content"
+  },
+  "Footer": {
+    "name": "Aerospace Cluster",
+    "tagline": "Startup, industry and academia ecosystem in the aerospace sector.",
+    "links": "Links",
+    "madeIn": "Made in Puebla, Mexico.",
+    "home": "Home",
+    "blog": "Blog",
+    "calendario": "Calendar",
+    "language": "Language"
+  }
+}
