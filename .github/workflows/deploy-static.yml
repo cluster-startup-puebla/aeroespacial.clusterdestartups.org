@@ -1,0 +1,43 @@
+name: Deploy estático a cPanel
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Build estático
+        run: pnpm build
+        env:
+          STATIC_EXPORT: "1"
+          NEXT_PUBLIC_SITE_URL: https://aeroespacial.clusterdestartups.org
+
+      - name: Redirect de raíz y .htaccess
+        run: node scripts/root-redirect.mjs
+
+      # server-dir apunta a la carpeta del subdominio en cPanel.
+      # Mismos secretos que clusterdestartups.org si comparte hosting;
+      # si este sitio vive en otra cuenta, definir FTPS_AERO_* propios.
+      - name: Subir a cPanel por FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: out/
+          server-dir: ./
