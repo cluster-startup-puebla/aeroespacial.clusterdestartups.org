@@ -9,6 +9,15 @@
       "primaryCta": "Ver el calendario",
       "secondaryCta": "Leer el blog"
     },
+    "allies": {
+      "label": "Aliados",
+      "estado": "Gobierno del Estado de Puebla",
+      "sedetra": "Secretaría de Desarrollo Económico y Trabajo",
+      "secihti": "Secretaría de Ciencia, Humanidades, Tecnología e Innovación",
+      "cincoDeMayo": "Puebla Cinco de Mayo",
+      "agro": "Clúster Agroalimentario Puebla",
+      "ammje": "AMMJE Angelópolis"
+    },
     "posts": {
       "eyebrow": "Blog",
       "title": "Últimas notas",

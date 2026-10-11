@@ -5,6 +5,7 @@ import { buildMetadata } from "@/modules/cores/site/src/services/page-metadata";
 import { listPosts } from "@/modules/features/blog/src/services/markdown";
 import { listUpcomingEvents, todayIso } from "@/modules/features/events/src/services/events";
 import { Hero } from "@/modules/features/pages/src/sections/home/hero";
+import { AlliesMarquee } from "@/modules/features/pages/src/sections/home/allies-marquee";
 import { LatestPosts } from "@/modules/features/pages/src/sections/home/latest-posts";
 import { UpcomingEvents } from "@/modules/features/pages/src/sections/home/upcoming-events";
 import { ClosingCta } from "@/modules/features/pages/src/sections/home/closing-cta";
@@ -50,6 +51,21 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         description={t("hero.description")}
         primary={{ href: "/calendario", label: t("hero.primaryCta") }}
         secondary={{ href: "/blog", label: t("hero.secondaryCta") }}
+      />
+      <AlliesMarquee
+        label={t("allies.label")}
+        logos={[
+          {
+            logos: [
+              { src: "/aliados/logo-estado.svg", alt: t("allies.estado"), frame: "h-12 w-auto sm:h-14" },
+              { src: "/aliados/logo-sedetra.png", alt: t("allies.sedetra"), frame: "h-10 w-auto sm:h-11" },
+              { src: "/aliados/logo-cinco-de-mayo.png", alt: t("allies.cincoDeMayo"), frame: "h-12 w-auto sm:h-14" },
+              { src: "/aliados/logo-secihti.png", alt: t("allies.secihti"), frame: "h-14 w-auto sm:h-16" },
+            ],
+          },
+          { src: "/aliados/logo-cluster-agro.png", alt: t("allies.agro"), frame: "h-24 w-auto sm:h-28" },
+          { src: "/aliados/logo-ammje.png", alt: t("allies.ammje"), frame: "h-12 w-auto sm:h-14" },
+        ]}
       />
       <LatestPosts
         eyebrow={t("posts.eyebrow")}

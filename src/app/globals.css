@@ -67,6 +67,17 @@
 
   --text-micro: 0.75rem;
   --text-micro--line-height: 1.4;
+
+  --animate-allies: allies-scroll 48s linear infinite;
+}
+
+@keyframes allies-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-25%);
+  }
 }
 
 @utility container-site {

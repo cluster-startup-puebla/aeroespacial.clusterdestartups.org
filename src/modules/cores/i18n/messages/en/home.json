@@ -9,6 +9,15 @@
       "primaryCta": "See the calendar",
       "secondaryCta": "Read the blog"
     },
+    "allies": {
+      "label": "Allies",
+      "estado": "Government of the State of Puebla",
+      "sedetra": "Secretariat of Economic Development and Labor",
+      "secihti": "Secretariat of Science, Humanities, Technology and Innovation",
+      "cincoDeMayo": "Puebla Cinco de Mayo",
+      "agro": "Puebla Food Cluster",
+      "ammje": "AMMJE Angelópolis"
+    },
     "posts": {
       "eyebrow": "Blog",
       "title": "Latest notes",
