@@ -3,7 +3,8 @@ title: "Visit to the Aeronautical University of Querétaro"
 description: "The cluster visited the Aeronautical University to open collaboration on Space Tech startups."
 excerpt: "A visit to explore collaboration between Puebla's aerospace startups and Querétaro's academia."
 date: "2026-09-25"
-author: "Aerospace Cluster"
+author: "Puebla en las estrellas"
+category: "sala-de-prensa"
 tags: ["UNA", "Space Tech", "Querétaro", "collaboration"]
 ---
 

@@ -3,7 +3,8 @@ title: "Convocatoria: startups Space Tech"
 description: "Abierta la convocatoria para startups aeroespaciales que quieran formar parte del padrón del clúster."
 excerpt: "Startups aeroespaciales pueden registrarse para participar en talleres, ruedas de negocio y el calendario del clúster."
 date: "2026-10-02"
-author: "Clúster Aeroespacial"
+author: "Puebla en las estrellas"
+category: "comunidad"
 tags: ["convocatoria", "startups", "Space Tech", "padrón"]
 ---
 

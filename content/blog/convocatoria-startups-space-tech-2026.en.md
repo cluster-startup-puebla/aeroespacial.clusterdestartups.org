@@ -3,7 +3,8 @@ title: "Open call: Space Tech startups"
 description: "Aerospace startups can now apply to join the cluster directory."
 excerpt: "Aerospace startups can register to join workshops, business rounds and the cluster calendar."
 date: "2026-10-02"
-author: "Aerospace Cluster"
+author: "Puebla en las estrellas"
+category: "comunidad"
 tags: ["call", "startups", "Space Tech", "directory"]
 ---
 

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/modules/cores/i18n/src/config/routing";
+import { SITE_URL } from "@/modules/cores/site/src/config/site";
 import { buildMetadata } from "@/modules/cores/site/src/services/page-metadata";
 import { listPosts } from "@/modules/features/blog/src/services/markdown";
 import { BlogList } from "@/modules/features/blog/src/components/blog-list";
@@ -16,13 +18,22 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Blog" });
-
-  return buildMetadata({
+  const meta = buildMetadata({
     locale,
     route: "/blog",
     title: t("metaTitle"),
     description: t("description"),
   });
+
+  return {
+    ...meta,
+    alternates: {
+      ...meta.alternates,
+      types: {
+        "application/rss+xml": `${SITE_URL}/${locale}/blog/feed.xml`,
+      },
+    },
+  };
 }
 
 export default async function BlogPage({ params }: PageProps<"/[locale]/blog">) {
@@ -41,12 +52,24 @@ export default async function BlogPage({ params }: PageProps<"/[locale]/blog">) 
         <p className="mt-4 max-w-2xl text-body-lg text-ink-secondary">{t("description")}</p>
       </header>
 
-      <BlogList
-        posts={posts}
-        locale={locale}
-        readMoreLabel={t("readMore")}
-        emptyLabel={t("empty")}
-      />
+      <Suspense fallback={null}>
+        <BlogList
+          posts={posts}
+          locale={locale}
+          labels={{
+            all: t("allPosts"),
+            press: t("categoryPress"),
+            community: t("categoryCommunity"),
+            readMore: t("readMore"),
+            empty: t("empty"),
+            filter: t("filterLabel"),
+            year: t("year"),
+            month: t("month"),
+            allYears: t("allYears"),
+            allMonths: t("allMonths"),
+          }}
+        />
+      </Suspense>
     </div>
   );
 }

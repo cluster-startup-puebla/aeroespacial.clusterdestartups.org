@@ -3,7 +3,8 @@ title: "Puebla at World Space Week 2026"
 description: "Puebla's aerospace ecosystem joined World Space Week with panels, visits and startup calls."
 excerpt: "From October 4 to 10, Puebla joined World Space Week with academic panels, guided visits and startup calls."
 date: "2026-10-06"
-author: "Aerospace Cluster"
+author: "Puebla en las estrellas"
+category: "sala-de-prensa"
 tags: ["World Space Week", "aerospace", "Puebla", "outreach"]
 ---
 

@@ -5,8 +5,16 @@
     "description": "Notes on startups, industry and academia in the aerospace sector.",
     "backToBlog": "← Back to the blog",
     "readingTime": "{minutes} min read",
+    "categoryPress": "Press room",
+    "categoryCommunity": "Community",
     "readMore": "Read more →",
-    "empty": "There are no posts in this category yet.",
+    "allPosts": "All notes",
+    "filterLabel": "Filter by category",
+    "year": "Year",
+    "month": "Month",
+    "allYears": "All years",
+    "allMonths": "All months",
+    "empty": "There are no notes for these filters.",
     "relatedTitle": "Notes you may like",
     "untitled": "Untitled"
   }

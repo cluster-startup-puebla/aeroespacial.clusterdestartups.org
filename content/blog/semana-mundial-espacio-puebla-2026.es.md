@@ -3,7 +3,8 @@ title: "Puebla en la Semana Mundial del Espacio 2026"
 description: "El ecosistema aeroespacial de Puebla participó en la semana mundial del espacio con paneles y actividades de divulgación."
 excerpt: "Del 4 al 10 de octubre Puebla se sumó a la Semana Mundial del Espacio con paneles, visitas y convocatorias para startups."
 date: "2026-10-06"
-author: "Clúster Aeroespacial"
+author: "Puebla en las estrellas"
+category: "sala-de-prensa"
 tags: ["Semana Mundial del Espacio", "aeroespacial", "Puebla", "divulgación"]
 ---
 

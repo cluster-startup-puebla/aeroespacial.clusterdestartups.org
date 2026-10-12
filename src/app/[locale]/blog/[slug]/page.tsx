@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { routing } from "@/modules/cores/i18n/src/config/routing";
-import { localeUrl } from "@/modules/cores/site/src/config/site";
-import { getPost, getPostSlugs, listPosts } from "@/modules/features/blog/src/services/markdown";
-import { PostCard } from "@/modules/features/blog/src/components/post-card";
+import { Badge } from "@/modules/shared/ui/src/components";
+import { Link, routing } from "@/modules/cores/i18n/src/config/routing";
+import { localeUrl, SITE_NAME, SITE_URL } from "@/modules/cores/site/src/config/site";
+import { RelatedNotes } from "@/modules/features/blog/src/components/related-notes";
+import { CATEGORIES, getPost, getPostSlugs, listPosts } from "@/modules/features/blog/src/services/markdown";
+import { shareImageFor } from "@/modules/features/blog/src/services/share-image";
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -24,8 +26,9 @@ export async function generateMetadata({
 
   const url = localeUrl(locale, `/blog/${slug}`);
   const languages = Object.fromEntries(
-    routing.locales.map((l) => [l, localeUrl(l, `/blog/${slug}`)]),
+    routing.locales.map((item) => [item, localeUrl(item, `/blog/${slug}`)]),
   );
+  const image = shareImageFor(post.image?.src, post.image?.alt ?? post.title);
 
   return {
     title: post.title,
@@ -40,6 +43,14 @@ export async function generateMetadata({
       publishedTime: post.date,
       authors: post.author,
       tags: post.tags,
+      siteName: SITE_NAME,
+      ...(image ? { images: [image] } : {}),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description,
+      ...(image ? { images: [image.url] } : {}),
     },
     alternates: {
       canonical: url,
@@ -56,50 +67,63 @@ export default async function BlogPostPage({
   const post = getPost(slug, locale);
   if (!post) notFound();
   const t = await getTranslations({ locale, namespace: "Blog" });
+  const relatedPosts = listPosts(locale).map(({ contentHtml, ...meta }) => {
+    void contentHtml;
+    return meta;
+  });
 
-  const related = listPosts(locale)
-    .filter((item) => item.slug !== slug)
-    .slice(0, 3)
-    .map(({ contentHtml, ...meta }) => {
-      void contentHtml;
-      return meta;
-    });
-
+  const isPress = post.category === CATEGORIES.press;
+  const images = [post.image, ...(post.images ?? [])].filter(
+    (item): item is NonNullable<typeof item> => Boolean(item?.src),
+  );
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
+    "@type": isPress ? "NewsArticle" : "BlogPosting",
     headline: post.title,
     description: post.description,
     datePublished: post.date,
     dateModified: post.date,
-    author: { "@type": "Organization", name: post.author },
+    author: {
+      "@type": "Organization",
+      name: post.author,
+      url: localeUrl("es"),
+    },
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
     mainEntityOfPage: localeUrl(locale, `/blog/${slug}`),
+    image: images.map((item) => (item.src.startsWith("http") ? item.src : `${SITE_URL}${item.src}`)),
+    articleSection: post.category,
+    url: localeUrl(locale, `/blog/${slug}`),
+    keywords: post.tags.join(", "),
     inLanguage: locale === "en" ? "en" : "es-MX",
   };
 
   return (
     <div className="container-site py-16 lg:py-24">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <article className="mx-auto max-w-3xl">
         <nav>
-          <a href={`/${locale}/blog/`} className="text-small text-link underline underline-offset-4">
+          <Link href="/blog" className="text-small text-link underline underline-offset-4">
             {t("backToBlog")}
-          </a>
+          </Link>
         </nav>
 
         <header className="mt-8">
-          <time dateTime={post.date} className="text-micro text-ink-muted">
-            {new Date(post.date).toLocaleDateString(locale, {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-              timeZone: "UTC",
-            })}
-          </time>
+          <div className="flex flex-wrap items-center gap-3">
+            <time dateTime={post.date} className="text-micro text-ink-muted">
+              {new Date(post.date).toLocaleDateString(locale, {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+                timeZone: "UTC",
+              })}
+            </time>
+            <Badge>{isPress ? t("categoryPress") : t("categoryCommunity")}</Badge>
+          </div>
           <h1 className="mt-2 font-display text-h1 text-ink">{post.title}</h1>
           <p className="mt-4 text-body-lg text-ink-secondary">{post.excerpt}</p>
           <p className="mt-6 flex flex-col items-start gap-1 text-small text-ink-muted md:flex-row md:items-center md:gap-3">
@@ -112,7 +136,7 @@ export default async function BlogPostPage({
         </header>
 
         {post.image && (
-          <div className="mt-10 overflow-hidden rounded-lg border border-line bg-elevated">
+          <figure className="mt-10 overflow-hidden rounded-lg border border-line bg-elevated">
             <Image
               src={post.image.src}
               alt={post.image.alt}
@@ -121,30 +145,16 @@ export default async function BlogPostPage({
               className="h-auto w-full"
               priority
             />
-          </div>
+            {post.image.caption && (
+              <figcaption className="px-4 py-3 text-small text-ink-muted">{post.image.caption}</figcaption>
+            )}
+          </figure>
         )}
 
-        <div
-          className="article-body mt-12"
-          dangerouslySetInnerHTML={{ __html: post.contentHtml }}
-        />
+        <div className="article-body mt-12" dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
       </article>
 
-      {related.length > 0 && (
-        <section className="mt-20 border-t border-line pt-12">
-          <h2 className="font-display text-h2 text-ink">{t("relatedTitle")}</h2>
-          <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {related.map((item) => (
-              <PostCard
-                key={item.slug}
-                post={item}
-                locale={locale}
-                readMoreLabel={t("readMore")}
-              />
-            ))}
-          </div>
-        </section>
-      )}
+      <RelatedNotes posts={relatedPosts} currentSlug={slug} locale={locale} />
     </div>
   );
 }

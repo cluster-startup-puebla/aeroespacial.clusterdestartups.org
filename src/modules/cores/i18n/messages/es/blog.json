@@ -5,8 +5,16 @@
     "description": "Notas sobre startups, industria y academia del sector aeroespacial.",
     "backToBlog": "← Volver al blog",
     "readingTime": "{minutes} min de lectura",
+    "categoryPress": "Sala de prensa",
+    "categoryCommunity": "Comunidad",
     "readMore": "Leer más →",
-    "empty": "No hay publicaciones en esta categoría todavía.",
+    "allPosts": "Todas las notas",
+    "filterLabel": "Filtrar por categoría",
+    "year": "Año",
+    "month": "Mes",
+    "allYears": "Todos los años",
+    "allMonths": "Todos los meses",
+    "empty": "No hay notas con estos filtros.",
     "relatedTitle": "Notas que te pueden interesar",
     "untitled": "Sin título"
   }
