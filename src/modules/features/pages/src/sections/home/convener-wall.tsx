@@ -92,6 +92,7 @@ function PhoneSectorLine({ sector, locale }: { sector: Sector; locale: string })
     <div className="mt-4 sm:mt-5">
       <div className="flex items-end justify-between gap-1.5 sm:justify-start sm:gap-5">
         {CONVOCANTES.filter((item) => item.sector === sector).map((item) => {
+          const id = item.id;
           const mark = (
             <span className="flex min-w-0 flex-col items-center">
               <Image
@@ -110,16 +111,19 @@ function PhoneSectorLine({ sector, locale }: { sector: Sector; locale: string })
               ) : null}
             </span>
           );
-          return hasConvocantePage(item) ? (
-            <Link
-              key={item.id}
-              href={`/${item.id}`}
-              className="flex min-w-0 items-end rounded-sm outline-none transition hover:opacity-70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink"
-            >
-              {mark}
-            </Link>
-          ) : (
-            <span key={item.id} className="flex min-w-0 items-end">
+          if (hasConvocantePage(item)) {
+            return (
+              <Link
+                key={id}
+                href={`/${id}`}
+                className="flex min-w-0 items-end rounded-sm outline-none transition hover:opacity-70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink"
+              >
+                {mark}
+              </Link>
+            );
+          }
+          return (
+            <span key={id} className="flex min-w-0 items-end">
               {mark}
             </span>
           );
