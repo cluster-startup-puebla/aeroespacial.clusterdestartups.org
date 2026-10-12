@@ -33,9 +33,3 @@ export const FLIGHT_FRAMES: LandingFrame[] = [
   { id: "IMG-06", src: "/landing/img-06.webp", altKey: "frames.img06" },
   { id: "IMG-07", src: "/landing/img-07.webp", altKey: "frames.img07" },
 ];
-
-export const OG_FRAME: LandingFrame = {
-  id: "IMG-08",
-  src: "/landing/img-08.webp",
-  altKey: "frames.img08",
-};

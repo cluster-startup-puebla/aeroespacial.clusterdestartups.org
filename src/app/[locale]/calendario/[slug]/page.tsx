@@ -45,7 +45,13 @@ export async function generateMetadata({
     ...metadata,
     openGraph: {
       ...metadata.openGraph,
-      images: [{ url: imageUrl, width: event.image.width, height: event.image.height, alt: event.image.alt }],
+      images: [{
+        url: imageUrl,
+        width: event.image.width,
+        height: event.image.height,
+        alt: event.image.alt,
+        type: event.image.src.endsWith(".png") ? "image/png" : "image/jpeg",
+      }],
     },
     twitter: {
       ...metadata.twitter,

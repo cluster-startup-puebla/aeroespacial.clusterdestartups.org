@@ -4,7 +4,6 @@ import { routing } from "@/modules/cores/i18n/src/config/routing";
 import { buildMetadata } from "@/modules/cores/site/src/services/page-metadata";
 import { listPosts } from "@/modules/features/blog/src/services/markdown";
 import { listUpcomingEvents, todayIso } from "@/modules/features/events/src/services/events";
-import { OG_FRAME } from "@/modules/features/pages/src/config/frames";
 import { Adhesion } from "@/modules/features/pages/src/sections/home/adhesion";
 import { Axes } from "@/modules/features/pages/src/sections/home/axes";
 import { Faq } from "@/modules/features/pages/src/sections/home/faq";
@@ -26,20 +25,13 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Home" });
-  const meta = buildMetadata({
+  return buildMetadata({
     locale,
     route: "/",
     title: t("metaTitle"),
     description: t("metaDescription"),
+    imageAlt: t("frames.img08"),
   });
-
-  return {
-    ...meta,
-    openGraph: {
-      ...meta.openGraph,
-      images: [{ url: OG_FRAME.src, alt: t("frames.img08") }],
-    },
-  };
 }
 
 export default async function HomePage({ params }: PageProps<"/[locale]">) {

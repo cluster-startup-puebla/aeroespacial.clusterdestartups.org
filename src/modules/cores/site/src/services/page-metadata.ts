@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { routing } from "@/modules/cores/i18n/src/config/routing";
-import { localeUrl, SITE_NAME } from "@/modules/cores/site/src/config/site";
+import { localeUrl, SHARE_IMAGE, SITE_NAME } from "@/modules/cores/site/src/config/site";
 
 interface BuildMetadataProps {
   locale: string;
@@ -10,6 +10,7 @@ interface BuildMetadataProps {
   type?: "website" | "article";
   publishedTime?: string;
   keywords?: string[];
+  imageAlt?: string;
 }
 
 export function buildMetadata({
@@ -20,12 +21,14 @@ export function buildMetadata({
   type = "website",
   publishedTime,
   keywords,
+  imageAlt,
 }: BuildMetadataProps): Metadata {
   const url = localeUrl(locale, route);
   const languages = Object.fromEntries(
     routing.locales.map((item) => [item, localeUrl(item, route)]),
   );
   const ogLocale = locale === "en" ? "en_US" : "es_MX";
+  const image = { ...SHARE_IMAGE, alt: imageAlt ?? SHARE_IMAGE.alt };
 
   return {
     title: route === "/" ? { absolute: title } : title,
@@ -44,11 +47,13 @@ export function buildMetadata({
       locale: ogLocale,
       alternateLocale: locale === "en" ? ["es_MX"] : ["en_US"],
       ...(publishedTime && { publishedTime }),
+      images: [image],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      images: [image.url],
     },
   };
 }

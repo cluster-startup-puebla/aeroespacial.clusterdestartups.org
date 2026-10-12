@@ -4,7 +4,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/modules/cores/i18n/src/config/routing";
-import { SITE_NAME, SITE_URL } from "@/modules/cores/site/src/config/site";
+import { SHARE_IMAGE, SITE_NAME, SITE_URL } from "@/modules/cores/site/src/config/site";
 import type { Locale } from "@/modules/cores/i18n/src/interfaces/i18n.interface";
 import { Header } from "@/modules/features/site/src/components/organisms/header";
 import { Footer } from "@/modules/features/site/src/components/organisms/footer";
@@ -48,8 +48,9 @@ export async function generateMetadata({
       type: "website",
       siteName: SITE_NAME,
       locale: ogLocale,
+      images: [SHARE_IMAGE],
     },
-    twitter: { card: "summary_large_image" },
+    twitter: { card: "summary_large_image", images: [SHARE_IMAGE.url] },
   };
 }
 
