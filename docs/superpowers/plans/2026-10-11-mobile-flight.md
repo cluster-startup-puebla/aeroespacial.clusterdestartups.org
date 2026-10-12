@@ -120,7 +120,7 @@ EOF
 
 The object is `hidden lg:block`, so the phone never gets the thing that makes the picture feel like orbit. A 42vw rocket starting at the right edge covers the end of “Puebla” on a 390px screen. Park a smaller one in the right void.
 
-- [ ] **Step 1: Share one pose**
+- [x] **Step 1: Share one pose**
 
 On both rocket images, replace the class string that starts with `flight-object` / `flight-launch`. Keep the `active === 0` opacity and CSS variables on the stage image exactly as they are now. Only the box model changes.
 
@@ -132,7 +132,7 @@ Shared pose classes, in this order:
 
 Stage image keeps `flight-launch flight-object` plus the active ternary. Stacked image keeps `flight-object` and drops `hidden`. Neither image may contain `hidden` or `lg:block`.
 
-- [ ] **Step 2: Check the pose**
+- [x] **Step 2: Check the pose**
 
 At 390×667, frame 0: the nose is in the upper right, the word “Puebla” is fully readable, the pill is fully readable. Scroll one viewport: the rocket leaves with the existing translate. At 1440×900 the rocket is still the large bleed on the right.
 
@@ -142,7 +142,7 @@ pnpm exec eslint src/modules/features/pages/src/sections/home/landing-flight.tsx
 
 Expected: exit 0.
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add src/modules/features/pages/src/sections/home/landing-flight.tsx
@@ -162,7 +162,7 @@ EOF
 
 `max-lg:overflow-y-auto` makes the first screen a document. Scroll never reaches the sentinels until the logo catalog is finished, so the flight feels missing.
 
-- [ ] **Step 1: Remove the inner scroll and slide the plate under the header**
+- [x] **Step 1: Remove the inner scroll and slide the plate under the header**
 
 The header is sticky and about `3.5rem` tall (`py-3` plus an `h-8` logo). A `100dvh` stage that starts below it hides the limb and the rail under the fold. Pull the flight up on small screens and pad the copy so the eyebrow clears the header.
 
@@ -178,7 +178,7 @@ The inner `container-site` stays `flex h-auto min-h-full items-end lg:h-full`.
 
 In `HeroCopy`, change the outer div padding from `py-6 lg:h-full lg:py-28` to `h-auto min-h-full pt-16 pb-10 lg:h-full lg:py-28`. `pt-16` clears the transparent header. `pb-10` clears the phone rail.
 
-- [ ] **Step 2: Add the phone rail**
+- [x] **Step 2: Add the phone rail**
 
 Keep the existing vertical `<ol>` (`hidden … lg:flex`). Add this sibling after it:
 
@@ -197,7 +197,7 @@ Keep the existing vertical `<ol>` (`hidden … lg:flex`). Add this sibling after
 </ol>
 ```
 
-- [ ] **Step 3: Check the flight**
+- [x] **Step 3: Check the flight**
 
 At 375×667 the eyebrow is not under the header. The limb and the rail are inside the viewport, not below it. `document.querySelector(".flight-stage")` has `overflow: hidden` and the copy wrapper does not scroll. Scroll one viewport: the still changes and `01` is the ink-colored index. Scroll back: `00` is ink and the hero returns. At 1440×900 the flight is not pulled up (`margin-top` is `0`), the vertical rail is the only rail, and it sits on the right.
 
@@ -207,7 +207,7 @@ pnpm exec eslint src/modules/features/pages/src/sections/home/landing-flight.tsx
 
 Expected: exit 0.
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 ```bash
 git add src/modules/features/pages/src/sections/home/landing-flight.tsx
@@ -227,7 +227,7 @@ EOF
 
 Below `lg` the wall is `grid-cols-2` of `h-16` cells, so every mark is forced into the same box and the first screen becomes a sponsor sheet. Desktop rows stay.
 
-- [ ] **Step 1: Render a phone strip**
+- [x] **Step 1: Render a phone strip**
 
 In `ConvenerWall`, keep the desktop tree inside `hidden lg:block`. Before it, render a phone strip. Build the strip from `CONVOCANTES` in array order, grouped by `ROWS` so sector order matches the desktop (academia, privado, then sociedad, gobierno).
 
@@ -253,7 +253,7 @@ In `ConvenerWall`, keep the desktop tree inside `hidden lg:block`. Before it, re
 
 Wrap the existing `mt-4 border-t … lg:mt-6` block so it is `hidden lg:block`, and drop the duplicate top border from the phone strip. The phone strip has no `border-t`; the limb is the divider.
 
-- [ ] **Step 2: Stop the square cells on the phone**
+- [x] **Step 2: Stop the square cells on the phone**
 
 `Slot` figure is `h-16 w-full` below `lg`, which stretches the strip. Change the figure class to:
 
@@ -267,7 +267,7 @@ Remove `px-2 pb-3` from the phone size. `lg:h-10`, `lg:h-8`, `lg:h-7`, and `lg:h
 
 The `Link` around a slot is `w-full lg:w-auto`. On the strip that makes each link a stretched cell. Change it to `w-auto`.
 
-- [ ] **Step 3: Check the lockup**
+- [x] **Step 3: Check the lockup**
 
 At 390×667 the marks are one row, about 32px tall, and the row scrolls horizontally. UPAEP stays wide. INAOE stays a small mark. BUAP is the seal, not a square crop. Sector words are in the row, muted. At 1440×900 the two desktop rows are unchanged and the phone strip is not in the layout (`display: none`).
 
@@ -277,7 +277,7 @@ pnpm exec eslint src/modules/features/pages/src/sections/home/convener-wall.tsx
 
 Expected: exit 0.
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 ```bash
 git add src/modules/features/pages/src/sections/home/convener-wall.tsx
