@@ -36,20 +36,28 @@ export function Header() {
   }, [pathname]);
 
   useEffect(() => {
-    const onScroll = () => {
+    let raf = 0;
+    const update = () => {
+      raf = 0;
       const hero = document.querySelector<HTMLElement>("#vuelo [data-flight-sentinel]");
-      if (!hero) {
-        setScrolled(window.scrollY > 12);
-        return;
+      let next = window.scrollY > 12;
+      if (hero) {
+        const mid = window.innerHeight / 2;
+        const box = hero.getBoundingClientRect();
+        next = !(box.top <= mid && box.bottom > mid);
       }
-      const mid = window.innerHeight / 2;
-      const box = hero.getBoundingClientRect();
-      const onHero = box.top <= mid && box.bottom > mid;
-      setScrolled(!onHero);
+      setScrolled((current) => (current === next ? current : next));
     };
-    onScroll();
+    const onScroll = () => {
+      if (raf) return;
+      raf = requestAnimationFrame(update);
+    };
+    update();
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (raf) cancelAnimationFrame(raf);
+    };
   }, [pathname]);
 
   const isActive = (href: string) => {
@@ -70,7 +78,7 @@ export function Header() {
         <div
           className={`mx-auto flex h-11 items-center justify-between gap-3 rounded-full border px-3 transition-[background-color,border-color,box-shadow] duration-300 ease-out motion-reduce:transition-none lg:h-14 lg:w-[min(100%,72rem)] lg:gap-6 lg:px-5 ${
             scrolled || !overFlight
-              ? "border-line bg-surface/90 shadow-lg backdrop-blur-md"
+              ? "border-line bg-surface shadow-lg"
               : "border-transparent bg-transparent shadow-none"
           }`}
         >

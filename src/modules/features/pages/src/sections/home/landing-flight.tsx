@@ -115,12 +115,13 @@ function Still({ frame, alt, active }: { frame: LandingFrame; alt: string; activ
     const shown = active ? "opacity-100" : "opacity-0";
     return (
       <>
-        <div className={`flight-frame absolute inset-x-0 bottom-[18.5rem] h-[58vw] overflow-hidden lg:hidden ${shown}`}>
+        <div className={`flight-frame absolute inset-x-0 bottom-[18.5rem] h-[58vw] overflow-hidden will-change-[opacity] lg:hidden ${shown}`}>
           <Image
-            src={frame.src}
+            src="/landing/img-03-phone.webp"
             alt={alt}
-            width={3872}
-            height={2722}
+            width={1800}
+            height={1265}
+            decoding="async"
             className="absolute top-[-22vw] left-1/2 h-auto w-[118%] max-w-none -translate-x-1/2"
           />
         </div>
@@ -279,7 +280,10 @@ export function LandingFlight() {
               active === 1 ? "max-lg:pb-16" : ""
             }`}
           >
-            {active === 0 ? <HeroCopy t={t} /> : <ChapterCopy chapterKey={CHAPTER_KEYS[active - 1]} t={t} />}
+            <div className={active === 0 ? "contents" : "hidden"}>
+              <HeroCopy t={t} />
+            </div>
+            {active > 0 ? <ChapterCopy chapterKey={CHAPTER_KEYS[active - 1]} t={t} /> : null}
           </div>
         </div>
         <Image
