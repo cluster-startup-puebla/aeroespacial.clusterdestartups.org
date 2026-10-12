@@ -3,6 +3,7 @@
 import { useEffect, useLayoutEffect, useState } from "react";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
+import { Link } from "@/modules/cores/i18n/src/config/routing";
 import { ConvenerWall } from "@/modules/features/pages/src/sections/home/convener-wall";
 import { PactCtas } from "@/modules/features/site/src/components/pact-ctas";
 import {
@@ -27,15 +28,26 @@ function HeroCopy({ t }: { t: HomeTranslator }) {
       <div className="max-w-3xl">
         <p className="text-micro font-medium uppercase tracking-[0.14em] text-ink-muted">{t("hero.eyebrow")}</p>
         <h1 className="mt-4 font-display text-place text-ink lg:mt-8">{t("hero.title")}</h1>
-        <p className="mt-4 max-w-xl text-body-lg text-ink-secondary lg:mt-6">{t("hero.description")}</p>
+        <p className="mt-6 hidden max-w-xl text-body-lg text-ink-secondary lg:block">{t("hero.description")}</p>
         <div className="mt-5 lg:mt-8">
-          <PactCtas
-            locale={locale}
-            samePage
-            primary={t("cta.primary")}
-            secondary={t("cta.secondary")}
-            size="default"
-          />
+          <div className="lg:hidden">
+            <PactCtas locale={locale} samePage primary={t("cta.primary")} size="default" />
+            <Link
+              href="/manifiesto"
+              className="mt-3 inline-block text-small text-ink-secondary underline underline-offset-4"
+            >
+              {t("cta.secondary")}
+            </Link>
+          </div>
+          <div className="hidden lg:block">
+            <PactCtas
+              locale={locale}
+              samePage
+              primary={t("cta.primary")}
+              secondary={t("cta.secondary")}
+              size="default"
+            />
+          </div>
         </div>
       </div>
       <div>

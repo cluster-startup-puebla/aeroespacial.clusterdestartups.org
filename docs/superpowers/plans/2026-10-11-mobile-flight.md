@@ -44,7 +44,7 @@ One viewport, top to bottom:
 
 The paragraph and the second pill are what turn the phone into a form. Desktop keeps both.
 
-- [ ] **Step 1: Split the hero furniture**
+- [x] **Step 1: Split the hero furniture**
 
 Replace `HeroCopy` with this. `PactCtas` stays as it is. The manifesto link uses the existing `Link` from `@/modules/cores/i18n/src/config/routing` — add that import next to the other imports in this file.
 
@@ -90,7 +90,7 @@ function HeroCopy({ t }: { t: HomeTranslator }) {
 }
 ```
 
-- [ ] **Step 2: Check both widths**
+- [x] **Step 2: Check both widths**
 
 At 390×667 the hero shows one pill and a text link. The four-line paragraph is gone. At 1440×900 the paragraph is back and both controls are pills.
 
@@ -100,7 +100,7 @@ pnpm exec eslint src/modules/features/pages/src/sections/home/landing-flight.tsx
 
 Expected: exit 0.
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add src/modules/features/pages/src/sections/home/landing-flight.tsx
