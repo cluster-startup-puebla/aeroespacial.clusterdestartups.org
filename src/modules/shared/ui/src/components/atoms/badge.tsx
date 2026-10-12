@@ -1,7 +1,20 @@
-export function Badge({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+export function Badge({
+  children,
+  className = "",
+  tone = "default",
+}: {
+  children: React.ReactNode;
+  className?: string;
+  tone?: "default" | "inverse";
+}) {
+  const toneClass =
+    tone === "inverse"
+      ? "border-transparent bg-ink text-on-brand"
+      : "border-line bg-surface-subtle text-ink-secondary";
+
   return (
     <span
-      className={`inline-flex items-center rounded-full border border-line bg-surface-subtle px-2.5 py-0.5 text-micro font-semibold text-ink-secondary ${className}`}
+      className={`inline-flex w-fit items-center rounded-full border px-2.5 py-0.5 text-micro font-semibold ${toneClass} ${className}`}
     >
       {children}
     </span>

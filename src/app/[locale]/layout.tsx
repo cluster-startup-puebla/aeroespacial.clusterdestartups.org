@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Schibsted_Grotesk } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -8,6 +9,13 @@ import type { Locale } from "@/modules/cores/i18n/src/interfaces/i18n.interface"
 import { Header } from "@/modules/features/site/src/components/organisms/header";
 import { Footer } from "@/modules/features/site/src/components/organisms/footer";
 import "../globals.css";
+
+const schibsted = Schibsted_Grotesk({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-schibsted",
+  display: "swap",
+});
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -52,7 +60,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className="h-full antialiased">
+    <html lang={locale} className={`${schibsted.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col bg-surface font-body text-ink">
         <NextIntlClientProvider messages={messages}>
           <Header />

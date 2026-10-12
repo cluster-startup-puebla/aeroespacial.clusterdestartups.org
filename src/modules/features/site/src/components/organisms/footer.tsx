@@ -1,10 +1,13 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/modules/cores/i18n/src/config/routing";
+import { PactCtas } from "@/modules/features/site/src/components/pact-ctas";
 import { NAV_ITEMS } from "@/modules/features/site/src/config/navigation";
 import { Logo } from "@/modules/shared/ui/src/components";
 
 export async function Footer() {
   const t = await getTranslations("Footer");
+  const home = await getTranslations("Home");
+  const locale = await getLocale();
 
   return (
     <footer className="mt-24 border-t border-line bg-surface-subtle py-16">
@@ -14,6 +17,14 @@ export async function Footer() {
             <Logo label={t("name")} className="h-full w-auto" />
           </Link>
           <p className="mt-3 max-w-xs text-small text-ink-secondary">{t("tagline")}</p>
+          <div className="mt-6">
+            <PactCtas
+              locale={locale}
+              samePage={false}
+              primary={home("cta.primary")}
+              secondary={home("cta.secondary")}
+            />
+          </div>
         </div>
 
         <div>

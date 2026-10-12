@@ -1,13 +1,24 @@
 {
   "Home": {
-    "metaTitle": "Aerospace Cluster — startups, industry and academia",
-    "metaDescription": "Aerospace Cluster space: calls, ecosystem news and the aerospace events calendar.",
+    "metaTitle": "Space Year 2026–2027 in Puebla",
+    "metaDescription": "On October 10 the Space Year began in Puebla. The Manifesto opens the path to the Pact. Adhesion closes on November 13, 2026.",
     "hero": {
-      "eyebrow": "Aerospace Cluster",
-      "title": "The aerospace ecosystem, in one place",
-      "description": "News, calls and events for startups, industry and academia in the aerospace sector.",
-      "primaryCta": "See the calendar",
-      "secondaryCta": "Read the blog"
+      "eyebrow": "Space Year 2026–2027",
+      "title": "Puebla",
+      "description": "On October 10, at UPAEP, World Space Week closed and the space year began. The Antorcha rocket was handed over.",
+      "primaryCta": "Join the pact",
+      "scroll": "Scroll to enter",
+      "conveners": "Convened by"
+    },
+    "cta": {
+      "primary": "Join the pact",
+      "secondary": "Read the manifesto"
+    },
+    "sectors": {
+      "gobierno": "Government",
+      "academia": "Academia",
+      "sociedad": "Civil society",
+      "privado": "Private"
     },
     "allies": {
       "label": "Allies",
@@ -17,6 +28,121 @@
       "cincoDeMayo": "Puebla Cinco de Mayo",
       "agro": "Puebla Food Cluster",
       "ammje": "AMMJE Angelópolis"
+    },
+    "frames": {
+      "img01": "Earth’s atmospheric limb at night, seen from low orbit.",
+      "img02": "Photographic stand-in of the Antorcha rocket, a ceremonial object against the void.",
+      "img03": "The group gathered at UPAEP on the day of the ceremony, with the Antorcha rocket at the center.",
+      "img04": "A long empty table in a dark room, set for a joint declaration.",
+      "img05": "Five objects on a black table: a telescope, a machined part, a cubesat, an optical bench, and a globe.",
+      "img06": "An empty signing table with three closed folders, in a darkened room.",
+      "img07": "The Puebla valley at night, seen from altitude, with dawn light on the horizon.",
+      "img08": "Earth’s limb and a ceremonial rocket, share image for the Space Year."
+    },
+    "chapters": {
+      "c1": {
+        "index": "01",
+        "eyebrow": "October 10, 2026",
+        "title": "The gathering",
+        "body": "At UPAEP, World Space Week closed, the Space Year began, and the Antorcha rocket was handed over."
+      },
+      "c2": {
+        "index": "02",
+        "eyebrow": "Manifesto",
+        "title": "An alliance that opens the path",
+        "body": "Twelve conveners invite more people in. No one owns the Pact. Whoever joins helps write it, on equal terms."
+      },
+      "c3": {
+        "index": "03",
+        "eyebrow": "Five axes",
+        "title": "Where the work points",
+        "body": "Public science, Puebla industry, space tech startups, talent aligned with industry, and links with the country and the world."
+      },
+      "c4": {
+        "index": "04",
+        "eyebrow": "Route",
+        "title": "Three dates",
+        "body": "The Manifesto is already issued. Adhesion for the signing closes on November 13. The Pact is signed on November 30."
+      },
+      "c5": {
+        "index": "05",
+        "eyebrow": "Adhesion",
+        "title": "What is required is will, not prior experience",
+        "body": "You write to the Startup and Innovation Cluster, naming a representative and a contribution. The Manifesto does not require resources."
+      }
+    },
+    "tagline": {
+      "line1": "Puebla is joining the aerospace value chain.",
+      "line2": "No single institution can do this alone."
+    },
+    "axes": {
+      "eyebrow": "Third agreement",
+      "title": "Five lines of work",
+      "items": {
+        "a1": {
+          "index": "01",
+          "title": "Science outreach",
+          "body": "Bring space science and technology to the public and awaken scientific vocations."
+        },
+        "a2": {
+          "index": "02",
+          "title": "Industry in Puebla",
+          "body": "Bring Puebla industry into the aerospace value chain."
+        },
+        "a3": {
+          "index": "03",
+          "title": "Space tech entrepreneurship",
+          "body": "Turn scientific and technological projects into startups with a business model."
+        },
+        "a4": {
+          "index": "04",
+          "title": "Talent and industry",
+          "body": "Align training and academic capacity with what industry needs."
+        },
+        "a5": {
+          "index": "05",
+          "title": "Connection",
+          "body": "Connect Puebla’s ecosystem with the aerospace sector in Mexico and abroad."
+        }
+      }
+    },
+    "route": {
+      "eyebrow": "Route",
+      "title": "From the Manifesto to the signing",
+      "d1": {
+        "date": "October 10, 2026",
+        "body": "The Manifesto is issued and the call opens."
+      },
+      "d2": {
+        "date": "November 13, 2026",
+        "body": "Deadline to join and be included in the signing."
+      },
+      "d3": {
+        "date": "November 30, 2026",
+        "body": "The Pact is signed and the Coordinating Committee is installed."
+      }
+    },
+    "adhesion": {
+      "eyebrow": "Adhesion",
+      "title": "Join the Pact",
+      "body": "Adhesion is in writing to the Startup and Innovation Cluster. Name a representative and a contribution. Prior aerospace experience is not required. To be included in the November 30 signing, the letter must arrive by November 13, 2026.",
+      "note": "The Manifesto is a statement of will. It creates no legal, financial, or budget obligations.",
+      "cta": "Join the pact"
+    },
+    "faq": {
+      "title": "Questions",
+      "q1": "Does the Manifesto require me to put up money?",
+      "a1": "No. It creates no financial or budget obligations. If resources, facilities, or technology come later, that is formalized in a separate agreement.",
+      "q2": "Do I need aerospace experience to join?",
+      "a2": "No. What is required is the will to contribute from education, research, industry, a chamber, a cluster, or a community.",
+      "q3": "How long do I have to join?",
+      "a3": "Until November 13, 2026, if you want to be included in the November 30 signing.",
+      "q4": "Who is convening this?",
+      "a4": "UPAEP, SECIHTI Puebla, the Startup and Innovation Cluster, INAOE, the National Coordination of World Space Week, SEDETRA, CTS, the Central Zone Automotive Cluster, CANACINTRA Puebla, Sintonía, Yankuilotl, and REGENIA.",
+      "q5": "What happens on November 30?",
+      "a5": "The Pact for the Development of the Aerospace Sector in Puebla is signed and the Coordinating Committee is installed. Conveners and those who have joined take part.",
+      "q6": "Where do I see the year’s activities?",
+      "a6": "In the agenda on this page and in the site calendar. Notes live in the journal."
     },
     "posts": {
       "eyebrow": "Blog",

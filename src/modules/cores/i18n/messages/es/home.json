@@ -1,13 +1,24 @@
 {
   "Home": {
-    "metaTitle": "Clúster Aeroespacial — startups, industria y academia",
-    "metaDescription": "Espacio del Clúster Aeroespacial: convocatorias, notas del ecosistema y el calendario de eventos aeroespaciales.",
+    "metaTitle": "Año Espacial 2026–2027 en Puebla",
+    "metaDescription": "El 10 de octubre empezó el Año Espacial en Puebla. El Manifiesto abre el camino al Pacto. La adhesión cierra el 13 de noviembre de 2026.",
     "hero": {
-      "eyebrow": "Clúster Aeroespacial",
-      "title": "El ecosistema aeroespacial, en un solo lugar",
-      "description": "Noticias, convocatorias y eventos para startups, industria y academia del sector aeroespacial.",
-      "primaryCta": "Ver el calendario",
-      "secondaryCta": "Leer el blog"
+      "eyebrow": "Año Espacial 2026–2027",
+      "title": "Puebla",
+      "description": "El 10 de octubre, en la UPAEP, cerró la Semana Mundial del Espacio y empezó el año espacial. Se entregó el Cohete Antorcha.",
+      "primaryCta": "Súmate al pacto",
+      "scroll": "Desliza para entrar",
+      "conveners": "Convocan"
+    },
+    "cta": {
+      "primary": "Súmate al pacto",
+      "secondary": "Lee el manifiesto"
+    },
+    "sectors": {
+      "gobierno": "Gobierno",
+      "academia": "Academia",
+      "sociedad": "Sociedad civil",
+      "privado": "Privado"
     },
     "allies": {
       "label": "Aliados",
@@ -17,6 +28,121 @@
       "cincoDeMayo": "Puebla Cinco de Mayo",
       "agro": "Clúster Agroalimentario Puebla",
       "ammje": "AMMJE Angelópolis"
+    },
+    "frames": {
+      "img01": "Línea de la atmósfera terrestre vista de noche, desde órbita baja.",
+      "img02": "Representación fotográfica del Cohete Antorcha, objeto ceremonial sobre el vacío.",
+      "img03": "El grupo reunido en la UPAEP el día del acto, con el Cohete Antorcha al centro.",
+      "img04": "Mesa larga vacía en una sala oscura, preparada para una declaración conjunta.",
+      "img05": "Cinco objetos sobre una mesa negra: telescopio, pieza de taller, cubesat, banco óptico y globo terráqueo.",
+      "img06": "Mesa de firma vacía, con tres carpetas cerradas, en una sala a oscuras.",
+      "img07": "El valle de Puebla de noche, visto desde altitud, con la luz del amanecer en el horizonte.",
+      "img08": "Limbo de la Tierra y un cohete ceremonial, imagen para compartir el Año Espacial."
+    },
+    "chapters": {
+      "c1": {
+        "index": "01",
+        "eyebrow": "10 de octubre de 2026",
+        "title": "El acto",
+        "body": "En la UPAEP se cerró la Semana Mundial del Espacio, empezó el Año Espacial y se entregó el Cohete Antorcha."
+      },
+      "c2": {
+        "index": "02",
+        "eyebrow": "Manifiesto",
+        "title": "Una alianza que abre el camino",
+        "body": "Doce convocantes invitan a más voluntades. Ninguno es dueño del Pacto. Quien se suma participa en la redacción, en igualdad."
+      },
+      "c3": {
+        "index": "03",
+        "eyebrow": "Cinco ejes",
+        "title": "Hacia dónde se trabaja",
+        "body": "Divulgación, industria poblana, emprendimiento en space tech, talento alineado con la industria, y vinculación con el país y el mundo."
+      },
+      "c4": {
+        "index": "04",
+        "eyebrow": "Ruta",
+        "title": "Tres fechas",
+        "body": "El Manifiesto ya está emitido. La adhesión para quedar en la firma cierra el 13 de noviembre. El Pacto se firma el 30 de noviembre."
+      },
+      "c5": {
+        "index": "05",
+        "eyebrow": "Adhesión",
+        "title": "Hace falta voluntad, no experiencia previa",
+        "body": "Se escribe al Clúster de Startups e Innovación, con representante y aportación. El Manifiesto no obliga a poner recursos."
+      }
+    },
+    "tagline": {
+      "line1": "Puebla entra a la cadena de valor aeroespacial.",
+      "line2": "Ninguna institución lo logra sola."
+    },
+    "axes": {
+      "eyebrow": "Acuerdo tercero",
+      "title": "Cinco ejes de trabajo",
+      "items": {
+        "a1": {
+          "index": "01",
+          "title": "Divulgación científica",
+          "body": "Acercar la ciencia y la tecnología espaciales a la sociedad y despertar vocaciones."
+        },
+        "a2": {
+          "index": "02",
+          "title": "Industria en Puebla",
+          "body": "Incorporar a la industria poblana a la cadena de valor aeroespacial."
+        },
+        "a3": {
+          "index": "03",
+          "title": "Emprendimiento en space tech",
+          "body": "Convertir proyectos científicos y tecnológicos en startups con modelo de negocio."
+        },
+        "a4": {
+          "index": "04",
+          "title": "Talento y empresa",
+          "body": "Alinear la formación y las capacidades académicas con la demanda de la industria."
+        },
+        "a5": {
+          "index": "05",
+          "title": "Vinculación",
+          "body": "Conectar al ecosistema poblano con el sector aeroespacial del país y del mundo."
+        }
+      }
+    },
+    "route": {
+      "eyebrow": "Ruta",
+      "title": "Del Manifiesto a la firma",
+      "d1": {
+        "date": "10 de octubre de 2026",
+        "body": "Emisión del Manifiesto y apertura de la convocatoria."
+      },
+      "d2": {
+        "date": "13 de noviembre de 2026",
+        "body": "Límite para adherirse y quedar en la firma."
+      },
+      "d3": {
+        "date": "30 de noviembre de 2026",
+        "body": "Firma del Pacto e instalación del Comité Coordinador."
+      }
+    },
+    "adhesion": {
+      "eyebrow": "Adhesión",
+      "title": "Sumarme al Pacto",
+      "body": "La adhesión es por escrito al Clúster de Startups e Innovación. Indica representante y aportación. No se pide experiencia aeroespacial previa. Para quedar en la firma del 30 de noviembre, la carta llega a más tardar el 13 de noviembre de 2026.",
+      "note": "El Manifiesto es una declaración de voluntad. No genera obligaciones jurídicas, económicas ni presupuestales.",
+      "cta": "Súmate al pacto"
+    },
+    "faq": {
+      "title": "Preguntas",
+      "q1": "¿El Manifiesto me obliga a poner dinero?",
+      "a1": "No. No genera obligaciones económicas ni presupuestales. Si más adelante hay recursos, instalaciones o tecnología, eso se formaliza en un convenio aparte.",
+      "q2": "¿Necesito experiencia aeroespacial para sumarme?",
+      "a2": "No. Hace falta voluntad de aportar desde la educación, la investigación, la industria, una cámara, un clúster o una comunidad.",
+      "q3": "¿Hasta cuándo puedo adherirme?",
+      "a3": "Hasta el 13 de noviembre de 2026, si quieres quedar incluido en la firma del 30 de noviembre.",
+      "q4": "¿Quién convoca?",
+      "a4": "UPAEP, SECIHTI Puebla, el Clúster de Startups e Innovación, INAOE, la Coordinación Nacional de la Semana Mundial del Espacio, SEDETRA, CTS, el Clúster Automotriz Zona Centro, CANACINTRA Puebla, Sintonía, Yankuilotl y REGENIA.",
+      "q5": "¿Qué pasa el 30 de noviembre?",
+      "a5": "Se firma el Pacto por el Desarrollo del Sector Aeroespacial en Puebla y se instala el Comité Coordinador. Participan los convocantes y quienes se hayan adherido.",
+      "q6": "¿Dónde veo las actividades del año?",
+      "a6": "En la agenda de esta página y en el calendario del sitio. Las notas están en la bitácora."
     },
     "posts": {
       "eyebrow": "Blog",

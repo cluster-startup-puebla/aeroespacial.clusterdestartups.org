@@ -4,11 +4,16 @@ import { routing } from "@/modules/cores/i18n/src/config/routing";
 import { buildMetadata } from "@/modules/cores/site/src/services/page-metadata";
 import { listPosts } from "@/modules/features/blog/src/services/markdown";
 import { listUpcomingEvents, todayIso } from "@/modules/features/events/src/services/events";
-import { Hero } from "@/modules/features/pages/src/sections/home/hero";
-import { AlliesMarquee } from "@/modules/features/pages/src/sections/home/allies-marquee";
+import { OG_FRAME } from "@/modules/features/pages/src/config/frames";
+import { Adhesion } from "@/modules/features/pages/src/sections/home/adhesion";
+import { Axes } from "@/modules/features/pages/src/sections/home/axes";
+import { Faq } from "@/modules/features/pages/src/sections/home/faq";
+import { LandingFlight } from "@/modules/features/pages/src/sections/home/landing-flight";
 import { LatestPosts } from "@/modules/features/pages/src/sections/home/latest-posts";
+import { RouteDates } from "@/modules/features/pages/src/sections/home/route-dates";
+import { SectionUrl } from "@/modules/features/pages/src/sections/home/section-url";
+import { TaglineReveal } from "@/modules/features/pages/src/sections/home/tagline-reveal";
 import { UpcomingEvents } from "@/modules/features/pages/src/sections/home/upcoming-events";
-import { ClosingCta } from "@/modules/features/pages/src/sections/home/closing-cta";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -21,13 +26,20 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Home" });
-
-  return buildMetadata({
+  const meta = buildMetadata({
     locale,
     route: "/",
     title: t("metaTitle"),
     description: t("metaDescription"),
   });
+
+  return {
+    ...meta,
+    openGraph: {
+      ...meta.openGraph,
+      images: [{ url: OG_FRAME.src, alt: t("frames.img08") }],
+    },
+  };
 }
 
 export default async function HomePage({ params }: PageProps<"/[locale]">) {
@@ -43,29 +55,43 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
   });
   const events = listUpcomingEvents(locale, todayIso()).slice(0, 3);
 
+  const faq = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: (["1", "2", "3", "4", "5", "6"] as const).map((id) => ({
+      "@type": "Question",
+      name: t(`faq.q${id}`),
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: t(`faq.a${id}`),
+      },
+    })),
+  };
+
   return (
     <>
-      <Hero
-        eyebrow={t("hero.eyebrow")}
-        title={t("hero.title")}
-        description={t("hero.description")}
-        primary={{ href: "/calendario", label: t("hero.primaryCta") }}
-        secondary={{ href: "/blog", label: t("hero.secondaryCta") }}
-      />
-      <AlliesMarquee
-        label={t("allies.label")}
-        logos={[
-          {
-            logos: [
-              { src: "/aliados/logo-estado.svg", alt: t("allies.estado"), frame: "h-12 w-auto sm:h-14" },
-              { src: "/aliados/logo-sedetra.png", alt: t("allies.sedetra"), frame: "h-10 w-auto sm:h-11" },
-              { src: "/aliados/logo-cinco-de-mayo.png", alt: t("allies.cincoDeMayo"), frame: "h-12 w-auto sm:h-14" },
-              { src: "/aliados/logo-secihti.png", alt: t("allies.secihti"), frame: "h-14 w-auto sm:h-16" },
-            ],
-          },
-          { src: "/aliados/logo-cluster-agro.png", alt: t("allies.agro"), frame: "h-24 w-auto sm:h-28" },
-          { src: "/aliados/logo-ammje.png", alt: t("allies.ammje"), frame: "h-12 w-auto sm:h-14" },
-        ]}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+      <LandingFlight />
+      <SectionUrl />
+      <TaglineReveal />
+      <Axes />
+      <RouteDates />
+      <UpcomingEvents
+        eyebrow={t("events.eyebrow")}
+        title={t("events.title")}
+        description={t("events.description")}
+        ctaLabel={t("events.cta")}
+        emptyLabel={calendario("empty")}
+        locale={locale}
+        today={todayIso()}
+        events={events}
+        labels={{
+          location: calendario("location"),
+          details: calendario("details"),
+          statusPast: calendario("statusPast"),
+          statusUpcoming: calendario("statusUpcoming"),
+          statusLive: calendario("statusLive"),
+        }}
       />
       <LatestPosts
         eyebrow={t("posts.eyebrow")}
@@ -74,28 +100,15 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         ctaLabel={t("posts.cta")}
         readMoreLabel={blog("readMore")}
         emptyLabel={blog("empty")}
+        categoryLabels={{
+          press: blog("categoryPress"),
+          community: blog("categoryCommunity"),
+        }}
         locale={locale}
         posts={posts}
       />
-      <UpcomingEvents
-        eyebrow={t("events.eyebrow")}
-        title={t("events.title")}
-        description={t("events.description")}
-        ctaLabel={t("events.cta")}
-        emptyLabel={calendario("empty")}
-        locale={locale}
-        events={events}
-        labels={{
-          location: calendario("location"),
-          details: calendario("details"),
-        }}
-      />
-      <ClosingCta
-        title={t("closing.title")}
-        description={t("closing.description")}
-        cta={t("closing.cta")}
-        href="/calendario"
-      />
+      <Adhesion />
+      <Faq />
     </>
   );
 }

@@ -9,6 +9,10 @@ interface LatestPostsProps {
   ctaLabel: string;
   readMoreLabel: string;
   emptyLabel: string;
+  categoryLabels: {
+    press: string;
+    community: string;
+  };
   locale: string;
   posts: PostMeta[];
 }
@@ -20,11 +24,12 @@ export function LatestPosts({
   ctaLabel,
   readMoreLabel,
   emptyLabel,
+  categoryLabels,
   locale,
   posts,
 }: LatestPostsProps) {
   return (
-    <section className="container-site py-16 lg:py-24">
+    <section id="bitacora" data-section="bitacora" className="container-site scroll-mt-20 py-16 lg:py-24">
       <SectionHeader eyebrow={eyebrow} title={title} description={description} />
 
       {posts.length === 0 ? (
@@ -32,7 +37,13 @@ export function LatestPosts({
       ) : (
         <div className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {posts.map((post) => (
-            <PostCard key={post.slug} post={post} locale={locale} readMoreLabel={readMoreLabel} />
+            <PostCard
+              key={post.slug}
+              post={post}
+              locale={locale}
+              readMoreLabel={readMoreLabel}
+              categoryLabels={categoryLabels}
+            />
           ))}
         </div>
       )}
