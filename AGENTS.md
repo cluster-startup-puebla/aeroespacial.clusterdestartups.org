@@ -54,6 +54,36 @@ Regla: las páginas en `app/` solo componen; la lógica vive en `modules/` y el 
 7. **CTAs:** español mexicano, acción concreta; nunca "Click aquí".
 8. **Pendiente (no implementar hasta traer el design system):** paleta de marca, modo oscuro (`data-theme`), fuentes Archivo/Raleway, GTM/analytics, cookie banner.
 
+## Notas del blog
+
+Cada nota son dos archivos con el mismo slug: `content/blog/{slug}.es.md` y `content/blog/{slug}.en.md`. Si falta un locale, el sitemap solo publica el que existe. La fecha (`YYYY-MM-DD`, UTC) ordena el listado. El tiempo de lectura sale de 200 palabras por minuto.
+
+```yaml
+title:
+description:        # meta y RSS
+excerpt:            # tarjeta y bajada
+date: "YYYY-MM-DD"
+author:
+category: "sala-de-prensa" | "comunidad"   # si falta, queda comunidad
+tags: []
+companies: []       # slugs; se guardan y no se enlazan hasta que exista padrón
+image:
+  src: "/blog/nombre.webp"   # archivo en public/, o URL https
+  alt:
+  caption:          # pie bajo la portada; opcional
+images:             # fotos extra; si el markdown ya las inserta, no se duplican
+  - src:
+    alt:
+    caption:
+```
+
+- `sala-de-prensa` es nota institucional (JSON-LD `NewsArticle`). `comunidad` cubre talleres y convocatorias (`BlogPosting`). El listado filtra con `?categoria=sala-de-prensa` o `?categoria=comunidad`.
+- Cuerpo en Markdown GFM. Foto con pie dentro del texto: `![texto alterno](/blog/foto.webp "pie")`.
+- Los enlaces salen con UTM: `utm_source=aeroespacial`, `utm_medium=referral`, `utm_campaign=blog`, `utm_content={slug}`. Las rutas internas se quedan relativas. `mailto:`, `tel:` y anclas no se tocan. `javascript:` y `data:` se descartan.
+- Portada WebP exige el JPEG de compartir en `public/og/{mismo-nombre}.jpg` (máximo 1200 px de ancho, menos de 600 KB). Sin ese archivo el build falla, porque WhatsApp no arma la tarjeta con WebP. Sin portada, la nota no declara `og:image`.
+- RSS en `/{locale}/blog/feed.xml` (sin barra final: con barra, Next redirige).
+- No hay sala de prensa ni directorio de empresas en este sitio. Esas piezas del clúster padre se quedan allá.
+
 ## Checklist antes de terminar una tarea
 
 - [ ] Cero hex/rgb hardcodeados en componentes (solo en `globals.css`)
