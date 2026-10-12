@@ -60,8 +60,8 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${schibsted.variable} h-full antialiased`}>
-      <body className="flex min-h-full flex-col bg-surface font-body text-ink">
+    <html lang={locale} className={`${schibsted.variable} min-h-svh antialiased`}>
+      <body className="flex min-h-svh flex-col bg-surface font-body text-ink">
         <NextIntlClientProvider messages={messages}>
           <Header />
           <main id="contenido" className="flex-1">

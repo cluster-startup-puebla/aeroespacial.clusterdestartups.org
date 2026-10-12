@@ -110,12 +110,11 @@ function FramePlate({
   );
 }
 
-function Still({ frame, alt, active }: { frame: LandingFrame; alt: string; active: boolean }) {
+function Still({ frame, alt }: { frame: LandingFrame; alt: string }) {
   if (frame.id === "IMG-03") {
-    const shown = active ? "opacity-100" : "opacity-0";
     return (
       <>
-        <div className={`flight-frame absolute inset-x-0 bottom-[18.5rem] h-[58vw] overflow-hidden will-change-[opacity] lg:hidden ${shown}`}>
+        <div className="absolute inset-x-0 bottom-[18.5rem] h-[58vw] overflow-hidden lg:hidden">
           <Image
             src="/landing/img-03-phone.webp"
             alt={alt}
@@ -125,11 +124,7 @@ function Still({ frame, alt, active }: { frame: LandingFrame; alt: string; activ
             className="absolute top-[-22vw] left-1/2 h-auto w-[118%] max-w-none -translate-x-1/2"
           />
         </div>
-        <FramePlate
-          frame={frame}
-          alt={alt}
-          className={`flight-frame hidden object-cover lg:block ${active ? "scale-100 opacity-100" : "scale-105 opacity-0"}`}
-        />
+        <FramePlate frame={frame} alt={alt} className="hidden object-cover lg:block" />
       </>
     );
   }
@@ -140,8 +135,9 @@ function Still({ frame, alt, active }: { frame: LandingFrame; alt: string; activ
       : frame.id === "IMG-05"
         ? "max-lg:object-center"
         : "";
-  const frameClass = `flight-frame object-cover ${mobileFocus} ${active ? "scale-100 opacity-100" : "scale-105 opacity-0"}`;
-  return <FramePlate frame={frame} alt={alt} priority={frame.id === "IMG-01"} className={frameClass} />;
+  return (
+    <FramePlate frame={frame} alt={alt} priority={frame.id === "IMG-01"} className={`object-cover ${mobileFocus}`} />
+  );
 }
 
 function StackedFlight({ t }: { t: HomeTranslator }) {
@@ -222,20 +218,54 @@ export function LandingFlight() {
 
   useEffect(() => {
     if (reduce) return;
-    // A rootMargin band never intersects these tall sentinels, so the observer
-    // stayed silent. Follow the sentinel that contains the viewport midpoint.
+    // Scrub the plates from the sentinel track. svh keeps that distance stable when the mobile toolbar hides.
     let raf = 0;
     const update = () => {
       raf = 0;
-      const mid = window.innerHeight / 2;
-      let next: number | null = null;
-      document.querySelectorAll<HTMLElement>("[data-flight-sentinel]").forEach((node) => {
-        const box = node.getBoundingClientRect();
-        if (box.top <= mid && box.bottom > mid) next = Number(node.dataset.index);
+      const sentinels = document.querySelectorAll<HTMLElement>("[data-flight-sentinel]");
+      const plates = document.querySelectorAll<HTMLElement>("[data-flight-plate]");
+      const first = sentinels[0];
+      if (!first) return;
+      const box = first.getBoundingClientRect();
+      if (box.height === 0) return;
+      const progress = -box.top / box.height;
+      if (progress < 0) return;
+      const count = sentinels.length;
+      const weights = new Array<number>(count).fill(0);
+      const hold = 0.45;
+      if (progress >= count - 1) {
+        weights[count - 1] = 1;
+      } else {
+        const index = Math.floor(progress);
+        const local = progress - index;
+        if (local < hold) {
+          weights[index] = 1;
+        } else {
+          const mix = (local - hold) / (1 - hold);
+          weights[index] = 1 - mix;
+          weights[index + 1] = mix;
+        }
+      }
+      plates.forEach((plate) => {
+        const index = Number(plate.dataset.flightPlate);
+        plate.style.opacity = String(weights[index] ?? 0);
       });
-      if (next === null) return;
-      const index = next;
-      setActive((current) => (current === index ? current : index));
+      const rocket = document.querySelector<HTMLElement>("[data-flight-rocket]");
+      if (rocket) {
+        const visible = weights[0] ?? 0;
+        const away = 1 - visible;
+        rocket.style.opacity = String(visible);
+        rocket.style.setProperty("--flight-x", `${(-34 * away).toFixed(2)}vw`);
+        rocket.style.setProperty("--flight-y", `${(-42 * away).toFixed(2)}vh`);
+      }
+      let lead = 0;
+      let strongest = -1;
+      weights.forEach((weight, index) => {
+        if (weight < strongest) return;
+        strongest = weight;
+        lead = index;
+      });
+      setActive((current) => (current === lead ? current : lead));
     };
     const onScroll = () => {
       if (raf) return;
@@ -256,13 +286,15 @@ export function LandingFlight() {
   return (
     <div id="vuelo" className="flight-track -mt-[60px] lg:-mt-20">
       <div className={`flight-stage ${active === 1 ? "max-lg:bg-black lg:bg-surface" : "bg-surface"}`}>
+        <div className="pointer-events-none absolute inset-x-0 top-full h-24 bg-inherit lg:hidden" aria-hidden />
         {frames.map((frame, index) => (
-          <Still
+          <div
             key={frame.id}
-            frame={frame}
-            alt={index === 0 ? t(HERO_PLATE.altKey) : t(frame.altKey)}
-            active={active === index}
-          />
+            data-flight-plate={index}
+            className={`pointer-events-none absolute inset-0 ${index === 0 ? "opacity-100" : "opacity-0"}`}
+          >
+            <Still frame={frame} alt={index === 0 ? t(HERO_PLATE.altKey) : t(frame.altKey)} />
+          </div>
         ))}
         <div
           className={`pointer-events-none absolute inset-0 bg-gradient-to-t from-surface via-surface/30 via-[34%] to-transparent to-[68%] ${
@@ -286,15 +318,12 @@ export function LandingFlight() {
             {active > 0 ? <ChapterCopy chapterKey={CHAPTER_KEYS[active - 1]} t={t} /> : null}
           </div>
         </div>
-        <Image
-          src={HERO_OBJECT.src}
-          alt=""
-          width={1500}
-          height={1000}
-          className={`flight-launch flight-object pointer-events-none absolute bottom-[6vw] right-[-40%] z-[2] w-[195vw] max-w-none rotate-[22deg] lg:bottom-auto lg:top-16 lg:right-[-3%] lg:w-[min(42vw,680px)] lg:rotate-0 ${
-            active === 0 ? "opacity-100 [--flight-x:0vw] [--flight-y:0vh]" : "opacity-0 [--flight-x:-34vw] [--flight-y:-42vh]"
-          }`}
-        />
+        <div
+          data-flight-rocket
+          className="flight-launch flight-object pointer-events-none absolute bottom-[6vw] right-[-40%] z-[2] w-[195vw] max-w-none rotate-[22deg] lg:bottom-auto lg:top-16 lg:right-[-3%] lg:w-[min(42vw,680px)] lg:rotate-0"
+        >
+          <Image src={HERO_OBJECT.src} alt="" width={1500} height={1000} className="h-auto w-full" />
+        </div>
         <ol className="absolute top-1/2 right-7 z-10 hidden -translate-y-1/2 flex-col gap-4 lg:flex">
           {RAIL.map((label, index) => (
             <li
@@ -320,7 +349,7 @@ export function LandingFlight() {
           ))}
         </ol>
       </div>
-      <div className="pointer-events-none -mt-[100dvh]">
+      <div className="pointer-events-none -mt-[100svh]">
         {frames.map((frame, index) => (
           <div
             key={frame.id}
@@ -328,7 +357,7 @@ export function LandingFlight() {
             data-section={FLIGHT_SECTION_IDS[index]}
             data-flight-sentinel
             data-index={index}
-            className="h-screen"
+            className="h-svh"
           />
         ))}
       </div>
