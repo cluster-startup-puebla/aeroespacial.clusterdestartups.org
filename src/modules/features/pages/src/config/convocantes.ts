@@ -29,7 +29,7 @@ export interface Convocante {
   presence?: "compact" | "quiet" | "seal";
   /** Two-line plate (secretarías, REGENIA, Gobierno del Estado). */
   stack?: boolean;
-  /** Render flush with the following mark. Federal SECIHTI and INAOE stay together. */
+  /** Render flush with the following mark in the same sector. */
   paired?: boolean;
   /** The plate does not spell the name. */
   showName?: boolean;
@@ -80,7 +80,7 @@ export function composeConvocanteIds(ids: string[]): string[][] {
 
 /**
  * Supplied plates, flattened to white.
- * Federal pair: the national Ciencia y Tecnología lockup sits with INAOE.
+ * Federal Ciencia y Tecnología and INAOE are one lockup, in academia.
  * State pair: Gobierno del Estado, then SEDETRA and SECIHTI Puebla.
  * UPAEP is the official wordmark, a step under the row so it does not outweigh BUAP.
  * BUAP is the seal plus the word, flattened to one white mark.
@@ -90,34 +90,6 @@ export function composeConvocanteIds(ids: string[]): string[][] {
  * Yankuilotl's wordmark file was cut off, so only the symbol is used.
  */
 export const CONVOCANTES: Convocante[] = [
-  {
-    id: "secihti-federal",
-    shortName: "SECIHTI",
-    sector: "gobierno",
-    logo: "/convocantes/secihti-federal.png",
-    width: 1400,
-    height: 169,
-    stack: true,
-    paired: true,
-    presence: "quiet",
-    detail: false,
-  },
-  {
-    id: "inaoe",
-    shortName: "INAOE",
-    sector: "gobierno",
-    logo: "/convocantes/inaoe.png",
-    width: 92,
-    height: 98,
-    links: [
-      { network: "web", href: "https://www.inaoep.mx/" },
-      { network: "facebook", href: "https://www.facebook.com/inaoe.oficial/" },
-      { network: "instagram", href: "https://www.instagram.com/inaoep.mx/" },
-      { network: "x", href: "https://x.com/inaoe_mx" },
-      { network: "linkedin", href: "https://www.linkedin.com/company/inaoe" },
-      { network: "youtube", href: "https://www.youtube.com/c/INAOEOficial" },
-    ],
-  },
   {
     id: "estado",
     shortName: "Gobierno del Estado",
@@ -173,6 +145,34 @@ export const CONVOCANTES: Convocante[] = [
       { network: "facebook", href: "https://www.facebook.com/people/Ciudad-Modelo-Puebla/100076196627496/" },
       { network: "x", href: "https://x.com/CapitalTSGobPue" },
       { network: "linkedin", href: "https://www.linkedin.com/company/capitaltsgobpue" },
+    ],
+  },
+  {
+    id: "secihti-federal",
+    shortName: "SECIHTI",
+    sector: "academia",
+    logo: "/convocantes/secihti-federal.png",
+    width: 1400,
+    height: 169,
+    stack: true,
+    paired: true,
+    presence: "quiet",
+    detail: false,
+  },
+  {
+    id: "inaoe",
+    shortName: "INAOE",
+    sector: "academia",
+    logo: "/convocantes/inaoe.png",
+    width: 92,
+    height: 98,
+    links: [
+      { network: "web", href: "https://www.inaoep.mx/" },
+      { network: "facebook", href: "https://www.facebook.com/inaoe.oficial/" },
+      { network: "instagram", href: "https://www.instagram.com/inaoep.mx/" },
+      { network: "x", href: "https://x.com/inaoe_mx" },
+      { network: "linkedin", href: "https://www.linkedin.com/company/inaoe" },
+      { network: "youtube", href: "https://www.youtube.com/c/INAOEOficial" },
     ],
   },
   {
@@ -258,6 +258,11 @@ export const CONVOCANTES: Convocante[] = [
     width: 423,
     height: 140,
     wide: true,
+    links: [
+      { network: "web", href: "https://www.clusterdestartups.org/" },
+      { network: "instagram", href: "https://www.instagram.com/cluster_startups/" },
+      { network: "linkedin", href: "https://www.linkedin.com/company/cluster-startups-puebla/" },
+    ],
   },
   {
     id: "automotriz",
@@ -267,6 +272,10 @@ export const CONVOCANTES: Convocante[] = [
     width: 800,
     height: 262,
     wide: true,
+    links: [
+      { network: "web", href: "https://www.clauz.mx/" },
+      { network: "linkedin", href: "https://www.linkedin.com/company/clauz" },
+    ],
   },
   {
     id: "canacintra",
@@ -276,6 +285,13 @@ export const CONVOCANTES: Convocante[] = [
     width: 900,
     height: 198,
     wide: true,
+    links: [
+      { network: "web", href: "https://canacintrapuebla.org.mx/" },
+      { network: "facebook", href: "https://www.facebook.com/PueblaCANACINTRA/" },
+      { network: "instagram", href: "https://www.instagram.com/canacintrapuebla/" },
+      { network: "x", href: "https://x.com/canacintrap" },
+      { network: "linkedin", href: "https://www.linkedin.com/company/canacintra-puebla/" },
+    ],
   },
   {
     id: "yankuilotl",
@@ -285,6 +301,10 @@ export const CONVOCANTES: Convocante[] = [
     width: 68,
     height: 74,
     showName: true,
+    links: [
+      { network: "web", href: "https://yankuilotl.com.mx/" },
+      { network: "linkedin", href: "https://www.linkedin.com/company/yankuilotl" },
+    ],
   },
 ];
 

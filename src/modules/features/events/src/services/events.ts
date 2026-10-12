@@ -124,6 +124,12 @@ export function getEventSlugs(locale: string): string[] {
     .map((f) => f.replace(`.${locale}.md`, ""));
 }
 
+export function listEventsForConvocante(locale: string, id: string): ClusterEvent[] {
+  return listEvents(locale)
+    .filter((event) => event.convocantes?.includes(id))
+    .sort((a, b) => b.date.localeCompare(a.date));
+}
+
 /** Eventos que aún no terminan, a partir de la fecha `from` (YYYY-MM-DD). */
 export function listUpcomingEvents(locale: string, from: string): ClusterEvent[] {
   return listEvents(locale).filter((event) => (event.endDate ?? event.date) >= from);

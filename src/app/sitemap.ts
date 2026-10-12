@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { routing } from "@/modules/cores/i18n/src/config/routing";
 import { getPost, listPosts } from "@/modules/features/blog/src/services/markdown";
 import { getEvent, listEvents } from "@/modules/features/events/src/services/events";
+import { detailConvocantes } from "@/modules/features/pages/src/config/convocantes";
 import { localeUrl } from "@/modules/cores/site/src/config/site";
 
 export const dynamic = "force-static";
@@ -45,6 +46,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
         changeFrequency: "monthly",
         priority: 0.8,
         alternates: languageAlternates(route, localesWithPost),
+      });
+    }
+
+    for (const convocante of detailConvocantes()) {
+      const route = `/${convocante.id}`;
+      entries.push({
+        url: localeUrl(locale, route),
+        lastModified,
+        changeFrequency: "monthly",
+        priority: 0.6,
+        alternates: languageAlternates(route),
       });
     }
 

@@ -8,6 +8,7 @@ location: "UPAEP, aulas T 407 y T 408, Puebla"
 category: "divulgación"
 convocantes:
   - upaep
+  - sme
 image:
   src: "/eventos/cierre-semana-mundial-espacio-upaep-2026.jpg"
   alt: "Cartel del cierre de la Semana Mundial del Espacio 2026 en UPAEP, sábado 10 de octubre."

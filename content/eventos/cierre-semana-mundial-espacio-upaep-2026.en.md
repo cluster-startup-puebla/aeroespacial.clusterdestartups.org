@@ -8,6 +8,7 @@ location: "UPAEP, rooms T 407 and T 408, Puebla"
 category: "outreach"
 convocantes:
   - upaep
+  - sme
 image:
   src: "/eventos/cierre-semana-mundial-espacio-upaep-2026.jpg"
   alt: "Poster for the World Space Week 2026 closing at UPAEP, Saturday 10 October."

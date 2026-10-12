@@ -1,6 +1,12 @@
 import Image from "next/image";
 import { Badge } from "@/modules/shared/ui/src/components";
-import { composeConvocanteIds, CONVOCANTES } from "@/modules/features/pages/src/config/convocantes";
+import { Link } from "@/modules/cores/i18n/src/config/routing";
+import {
+  composeConvocanteIds,
+  CONVOCANTES,
+  convocanteById,
+  hasConvocantePage,
+} from "@/modules/features/pages/src/config/convocantes";
 import type { ClusterEvent } from "@/modules/features/events/src/interfaces/event.interface";
 import {
   eventTiming,
@@ -66,14 +72,12 @@ function organizerGroups(ids: string[] | undefined, locale: string) {
 }
 
 function OrganizerMarkView({ mark, size }: { mark: OrganizerMark; size: "detail" | "list" }) {
-  if (!mark.logo) {
-    return <span className="font-display text-small text-ink">{mark.name}</span>;
-  }
   const list = size === "list";
-  return (
+  const linked = hasConvocantePage(convocanteById(mark.id));
+  const visual = mark.logo ? (
     <Image
       src={mark.logo}
-      alt={mark.name}
+      alt={linked ? "" : mark.name}
       width={mark.width}
       height={mark.height}
       style={{
@@ -83,6 +87,20 @@ function OrganizerMarkView({ mark, size }: { mark: OrganizerMark; size: "detail"
       }}
       className="shrink-0 object-contain object-left"
     />
+  ) : (
+    <span className="font-display text-small text-ink">{mark.name}</span>
+  );
+
+  if (!linked) return visual;
+
+  return (
+    <Link
+      href={`/${mark.id}`}
+      aria-label={mark.name}
+      className="inline-flex rounded-sm outline-none transition hover:opacity-70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink"
+    >
+      {visual}
+    </Link>
   );
 }
 

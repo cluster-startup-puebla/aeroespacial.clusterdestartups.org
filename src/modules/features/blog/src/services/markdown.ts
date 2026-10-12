@@ -72,11 +72,18 @@ interface Frontmatter {
   category?: string;
   tags: string[];
   companies?: string[];
+  convocantes?: string[];
   image?: BlogPostImage;
   images?: BlogPostImage[];
 }
 
 export { CATEGORIES };
+
+function asIds(value: unknown): string[] | undefined {
+  const list = Array.isArray(value) ? value : typeof value === "string" ? [value] : [];
+  const ids = list.filter((item): item is string => typeof item === "string" && item.length > 0);
+  return ids.length > 0 ? ids : undefined;
+}
 
 function parseFile(fileName: string): BlogPost {
   const [slug, locale] = fileName.replace(/\.md$/, "").split(".");
@@ -105,6 +112,7 @@ function parseFile(fileName: string): BlogPost {
     companies: Array.isArray(meta.companies)
       ? meta.companies.filter((item): item is string => typeof item === "string")
       : [],
+    convocantes: asIds(meta.convocantes),
     image: meta.image,
     images: meta.images,
     readingMinutes: Math.max(1, Math.round(words / 200)),
@@ -126,6 +134,10 @@ export function getPost(slug: string, locale: string): BlogPost | undefined {
   const file = `${slug}.${locale}.md`;
   if (!fs.existsSync(path.join(CONTENT_DIR, file))) return undefined;
   return parseFile(file);
+}
+
+export function listPostsForConvocante(locale: string, id: string): BlogPost[] {
+  return listPosts(locale).filter((post) => post.convocantes?.includes(id));
 }
 
 export function getPostSlugs(locale: string): string[] {

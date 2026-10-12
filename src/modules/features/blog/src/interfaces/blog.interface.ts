@@ -23,6 +23,8 @@ export interface BlogPost {
   tags: string[];
   /** Slugs reserved for a future directory. Stored, not linked yet. */
   companies?: string[];
+  /** Ids de convocantes relacionados con la nota. */
+  convocantes?: string[];
   image?: BlogPostImage;
   /** Extra photos besides the cover. They can also be inserted in markdown. */
   images?: BlogPostImage[];

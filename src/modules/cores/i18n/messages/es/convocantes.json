@@ -1,0 +1,73 @@
+{
+  "Convocante": {
+    "back": "Volver al inicio",
+    "allyType": "Tipo de aliado",
+    "events": "Eventos",
+    "posts": "Notas",
+    "emptyEvents": "Todavía no hay eventos de este convocante en el calendario.",
+    "emptyPosts": "Todavía no hay notas de este convocante en el blog.",
+    "networks": {
+      "web": "Sitio",
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "x": "X",
+      "linkedin": "LinkedIn",
+      "youtube": "YouTube",
+      "tiktok": "TikTok"
+    },
+    "profiles": {
+      "inaoe": {
+        "name": "Instituto Nacional de Astrofísica, Óptica y Electrónica",
+        "description": "Centro público de investigación en Tonantzintla. Hereda el Observatorio Astrofísico Nacional fundado en 1942. Convoca por su director general, Dr. David Sánchez de la Llave."
+      },
+      "sedetra": {
+        "name": "Secretaría de Desarrollo Económico y Trabajo",
+        "description": "Dependencia del Gobierno del Estado de Puebla. Promueve el desarrollo económico y el trabajo en la entidad. En el Manifiesto convoca por su representante, Lic. Marco Antonio Molina Sánchez."
+      },
+      "secihti": {
+        "name": "Secretaría de Ciencia, Humanidades, Tecnología e Innovación de Puebla",
+        "description": "Dependencia del Gobierno del Estado de Puebla. Articula ciencia, humanidades, tecnología e innovación con academia, gobierno, empresas y sociedad. Convoca por su encargado de despacho, Mtro. Héctor Guillermo Silva Galindo."
+      },
+      "cts": {
+        "name": "Capital de la Tecnología y la Sostenibilidad",
+        "description": "Organismo público en San José Chiapa, antes Ciudad Modelo. Nodo industrial y urbano del Gobierno de Puebla. Convoca por su director general, Mtro. José Antonio Silva Hernández."
+      },
+      "upaep": {
+        "name": "Universidad Popular Autónoma del Estado de Puebla",
+        "description": "Universidad privada de Puebla. El 10 de octubre de 2026 fue sede del cierre nacional de la Semana Mundial del Espacio: ahí empezó el Año Espacial y se entregó el Cohete Antorcha. Convoca por su vicerrectora de Investigación, Dra. Rosa María Cantón Croda, en representación del rector, Dr. Jorge Medina Delgadillo."
+      },
+      "buap": {
+        "name": "Benemérita Universidad Autónoma de Puebla",
+        "description": "Universidad pública del estado, con sede en el centro histórico de Puebla. Convoca desde la academia."
+      },
+      "sintonia": {
+        "name": "Sintonía",
+        "description": "Instituto de trabajo colaborativo para la productividad y el desarrollo económico de Puebla, entre empresas, gobierno, universidades y sociedad. Lo preside el Dr. José Pablo Nuño de la Parra."
+      },
+      "sme": {
+        "name": "Coordinación Nacional de la Semana Mundial del Espacio México",
+        "description": "Coordina en México la Semana Mundial del Espacio, del 4 al 10 de octubre. La preside el Ing. Mario M. Arreola Santander. En 2026 el tema internacional fue Rocket Revolution."
+      },
+      "regenia": {
+        "name": "Red para la Generación del Conocimiento e Innovación Abierta",
+        "description": "Red nacional que articula divulgadores, universidades, empresas, gobiernos y ciudadanía para abrir el conocimiento científico y tecnológico. La preside el Lic. Denzel Manuel Carrillo Tovar."
+      },
+      "csi": {
+        "name": "Clúster de Startups e Innovación, A.C.",
+        "description": "Asociación civil que convoca el Manifiesto junto con las demás instituciones. La preside Rodrigo Yamil Álvarez Moisés. La adhesión al Pacto se escribe a este clúster, con representante y aportación, a más tardar el 13 de noviembre de 2026."
+      },
+      "automotriz": {
+        "name": "Clúster Automotriz Zona Centro",
+        "description": "Espacio de vinculación de la industria automotriz de Puebla y Tlaxcala. Lo dirige la Mtra. Mónica Doger Ramírez."
+      },
+      "canacintra": {
+        "name": "Cámara Nacional de la Industria de Transformación en Puebla",
+        "description": "Cámara empresarial de los industriales de Puebla. En el Manifiesto convoca por la presidenta de su Sector Automotriz y Autopartes, Mtra. Victa Wewerinke."
+      },
+      "yankuilotl": {
+        "name": "Yankuilotl",
+        "description": "Empresa de participación estatal mayoritaria en San Andrés Cholula. Trabaja semiconductores, movilidad y software para el ecosistema tecnológico de Puebla. En el Manifiesto la representa el Dr. Argel Vega."
+      }
+    }
+  }
+}

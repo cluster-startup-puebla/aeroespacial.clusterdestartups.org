@@ -1,0 +1,73 @@
+{
+  "Convocante": {
+    "back": "Back to home",
+    "allyType": "Type of ally",
+    "events": "Events",
+    "posts": "Notes",
+    "emptyEvents": "This convener has no events on the calendar yet.",
+    "emptyPosts": "This convener has no notes on the blog yet.",
+    "networks": {
+      "web": "Website",
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "x": "X",
+      "linkedin": "LinkedIn",
+      "youtube": "YouTube",
+      "tiktok": "TikTok"
+    },
+    "profiles": {
+      "inaoe": {
+        "name": "National Institute of Astrophysics, Optics and Electronics",
+        "description": "Public research center in Tonantzintla. It continues the National Astrophysical Observatory founded in 1942. It convenes through its director general, Dr. David Sánchez de la Llave."
+      },
+      "sedetra": {
+        "name": "Secretariat of Economic Development and Labor",
+        "description": "Agency of the Government of the State of Puebla. It promotes economic development and labor in the state. In the Manifesto it convenes through its representative, Lic. Marco Antonio Molina Sánchez."
+      },
+      "secihti": {
+        "name": "Secretariat of Science, Humanities, Technology and Innovation of Puebla",
+        "description": "Agency of the Government of the State of Puebla. It connects science, the humanities, technology and innovation with academia, government, companies and society. It convenes through its acting head, Mtro. Héctor Guillermo Silva Galindo."
+      },
+      "cts": {
+        "name": "Capital of Technology and Sustainability",
+        "description": "State agency in San José Chiapa, formerly Ciudad Modelo. An industrial and urban node of the Government of Puebla. It convenes through its director general, Mtro. José Antonio Silva Hernández."
+      },
+      "upaep": {
+        "name": "Universidad Popular Autónoma del Estado de Puebla",
+        "description": "Private university in Puebla. On October 10, 2026 it hosted the national close of World Space Week: the Space Year began there and the Antorcha rocket was handed over. It convenes through its Vice Rector for Research, Dra. Rosa María Cantón Croda, on behalf of the rector, Dr. Jorge Medina Delgadillo."
+      },
+      "buap": {
+        "name": "Benemérita Universidad Autónoma de Puebla",
+        "description": "The state's public university, based in Puebla's historic center. It convenes from academia."
+      },
+      "sintonia": {
+        "name": "Sintonía",
+        "description": "Collaborative institute for productivity and the economic development of Puebla, across companies, government, universities and society. Dr. José Pablo Nuño de la Parra presides over it."
+      },
+      "sme": {
+        "name": "National Coordination of World Space Week Mexico",
+        "description": "It coordinates World Space Week in Mexico, from October 4 to 10. Ing. Mario M. Arreola Santander presides over it. In 2026 the international theme was Rocket Revolution."
+      },
+      "regenia": {
+        "name": "Network for the Generation of Knowledge and Open Innovation",
+        "description": "A national network that connects science communicators, universities, companies, governments and the public to open scientific and technological knowledge. Lic. Denzel Manuel Carrillo Tovar presides over it."
+      },
+      "csi": {
+        "name": "Startup and Innovation Cluster, A.C.",
+        "description": "Civil association that convenes the Manifesto together with the other institutions. Rodrigo Yamil Álvarez Moisés presides over it. Adhesion to the Pact is written to this cluster, with a representative and a contribution, by November 13, 2026."
+      },
+      "automotriz": {
+        "name": "Central Zone Automotive Cluster",
+        "description": "The meeting point of the automotive industry in Puebla and Tlaxcala. Mtra. Mónica Doger Ramírez directs it."
+      },
+      "canacintra": {
+        "name": "National Chamber of the Transformation Industry in Puebla",
+        "description": "Business chamber of Puebla's industrialists. In the Manifesto it convenes through the president of its Automotive and Auto Parts Sector, Mtra. Victa Wewerinke."
+      },
+      "yankuilotl": {
+        "name": "Yankuilotl",
+        "description": "Majority state-owned company in San Andrés Cholula. It works on semiconductors, mobility and software for Puebla's technology ecosystem. Dr. Argel Vega represents it in the Manifesto."
+      }
+    }
+  }
+}
