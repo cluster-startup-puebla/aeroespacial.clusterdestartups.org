@@ -2,6 +2,7 @@
   "Nav": {
     "label": "Main navigation",
     "home": "Home",
+    "manifiesto": "Manifesto",
     "blog": "Blog",
     "calendario": "Calendar",
     "open": "Open menu",
@@ -9,11 +10,12 @@
     "skipToContent": "Skip to content"
   },
   "Footer": {
-    "name": "Aerospace Cluster",
-    "tagline": "Startup, industry and academia ecosystem in the aerospace sector.",
+    "name": "Puebla en las estrellas",
+    "tagline": "Puebla's space year.",
     "links": "Links",
     "madeIn": "Made in Puebla, Mexico.",
     "home": "Home",
+    "manifiesto": "Manifesto",
     "blog": "Blog",
     "calendario": "Calendar",
     "language": "Language"

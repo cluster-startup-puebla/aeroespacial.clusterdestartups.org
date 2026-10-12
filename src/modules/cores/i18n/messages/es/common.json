@@ -2,6 +2,7 @@
   "Nav": {
     "label": "Navegación principal",
     "home": "Inicio",
+    "manifiesto": "Manifiesto",
     "blog": "Blog",
     "calendario": "Calendario",
     "open": "Abrir menú",
@@ -9,11 +10,12 @@
     "skipToContent": "Saltar al contenido"
   },
   "Footer": {
-    "name": "Clúster Aeroespacial",
-    "tagline": "Ecosistema de startups, industria y academia del sector aeroespacial.",
+    "name": "Puebla en las estrellas",
+    "tagline": "El año espacial de Puebla.",
     "links": "Enlaces",
     "madeIn": "Hecho en Puebla, México.",
     "home": "Inicio",
+    "manifiesto": "Manifiesto",
     "blog": "Blog",
     "calendario": "Calendario",
     "language": "Idioma"
