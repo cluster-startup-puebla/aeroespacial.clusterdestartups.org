@@ -12,10 +12,10 @@ import {
 } from "@/modules/features/pages/src/config/convocantes";
 
 const MARK_CLASS = {
-  compact: "h-full w-full object-contain lg:h-8 lg:max-h-8 lg:w-auto",
-  quiet: "h-full w-full object-contain lg:h-7 lg:max-h-7 lg:w-auto",
-  seal: "h-full w-full object-contain lg:h-16 lg:max-h-16 lg:w-auto",
-  plate: "h-full w-full object-contain lg:h-auto lg:max-h-10 lg:w-auto lg:max-w-full",
+  compact: "h-full w-auto object-contain lg:h-8 lg:max-h-8 lg:w-auto",
+  quiet: "h-full w-auto object-contain lg:h-7 lg:max-h-7 lg:w-auto",
+  seal: "h-full w-auto object-contain lg:h-16 lg:max-h-16 lg:w-auto",
+  plate: "h-full w-auto object-contain lg:h-auto lg:max-h-10 lg:w-auto lg:max-w-full",
 } as const;
 
 const SLOT_CLASS = {
@@ -61,7 +61,7 @@ function Slot({ item, locale }: { item: Convocante; locale: string }) {
   const presence = item.presence ?? "plate";
   const plate = (
     <figure
-      className={`relative flex h-16 w-full items-center justify-center px-2 pb-3 lg:w-auto lg:px-0 lg:pb-0 ${SLOT_CLASS[presence]}`}
+      className={`relative flex h-8 w-auto shrink-0 items-center justify-center lg:h-16 lg:w-full lg:px-0 lg:pb-0 ${SLOT_CLASS[presence]}`}
     >
       <Mark item={item} locale={locale} />
       {item.showName ? (
@@ -77,7 +77,7 @@ function Slot({ item, locale }: { item: Convocante; locale: string }) {
   return (
     <Link
       href={`/${item.id}`}
-      className="block w-full rounded-sm outline-none transition hover:opacity-70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink lg:w-auto"
+      className="block w-auto rounded-sm outline-none transition hover:opacity-70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink lg:w-auto"
     >
       {plate}
     </Link>
@@ -128,22 +128,41 @@ export function ConvenerWall() {
   const locale = useLocale();
 
   return (
-    <div className="mt-4 border-t border-line pt-3 lg:mt-6 lg:pt-4">
-      <p className="text-micro font-medium uppercase tracking-[0.16em] text-ink">
-        {t("hero.conveners")}
-      </p>
-      <div className="mt-3 flex flex-col gap-y-4 lg:mt-4 lg:gap-y-5">
-        {ROWS.map((sectors) => (
-          <div
-            key={sectors.join("-")}
-            className="flex flex-col gap-y-4 lg:flex-row lg:items-start lg:gap-x-10"
-          >
-            {sectors.map((sector) => (
-              <SectorBlock key={sector} sector={sector} locale={locale} t={t} />
-            ))}
-          </div>
-        ))}
+    <>
+      <div className="mt-4 lg:hidden">
+        <p className="text-micro font-medium uppercase tracking-[0.16em] text-ink">{t("hero.conveners")}</p>
+        <div className="mt-3 flex items-end gap-6 overflow-x-auto pb-1">
+          {ROWS.flat().map((sector) => (
+            <div key={sector} className="flex shrink-0 items-end gap-4">
+              <p className="pb-2 text-micro uppercase tracking-[0.08em] text-ink-muted">{t(`sectors.${sector}`)}</p>
+              <div className="flex items-center gap-4">
+                {CONVOCANTES.filter((item) => item.sector === sector).map((item) => (
+                  <div key={item.id} className="shrink-0">
+                    <Slot item={item} locale={locale} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+      <div className="mt-4 border-t border-line pt-3 lg:mt-6 lg:pt-4 hidden lg:block">
+        <p className="text-micro font-medium uppercase tracking-[0.16em] text-ink">
+          {t("hero.conveners")}
+        </p>
+        <div className="mt-3 flex flex-col gap-y-4 lg:mt-4 lg:gap-y-5">
+          {ROWS.map((sectors) => (
+            <div
+              key={sectors.join("-")}
+              className="flex flex-col gap-y-4 lg:flex-row lg:items-start lg:gap-x-10"
+            >
+              {sectors.map((sector) => (
+                <SectorBlock key={sector} sector={sector} locale={locale} t={t} />
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
   );
 }
