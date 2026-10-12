@@ -24,7 +24,7 @@ function HeroCopy({ t }: { t: HomeTranslator }) {
   const locale = useLocale();
 
   return (
-    <div className="flex h-auto min-h-full flex-col justify-between pt-16 pb-10 lg:h-full lg:py-28">
+    <div className="flex h-auto min-h-full w-full min-w-0 flex-col justify-between pt-20 pb-10 lg:h-full lg:py-20">
       <div className="max-w-3xl">
         <p className="text-micro font-medium uppercase tracking-[0.14em] text-ink-muted">{t("hero.eyebrow")}</p>
         <h1 className="mt-4 font-display text-place text-ink lg:mt-8">{t("hero.title")}</h1>
@@ -50,7 +50,7 @@ function HeroCopy({ t }: { t: HomeTranslator }) {
           </div>
         </div>
       </div>
-      <div>
+      <div className="w-full min-w-0">
         <ConvenerWall />
         <p className="mt-2 text-center text-micro font-medium uppercase tracking-[0.14em] text-ink-muted lg:mt-6">
           {t("hero.scroll")}
@@ -111,8 +111,35 @@ function FramePlate({
 }
 
 function Still({ frame, alt, active }: { frame: LandingFrame; alt: string; active: boolean }) {
-  const frameClass = `flight-frame object-cover ${active ? "scale-100 opacity-100" : "scale-105 opacity-0"}`;
+  if (frame.id === "IMG-03") {
+    const shown = active ? "opacity-100" : "opacity-0";
+    return (
+      <>
+        <div className={`flight-frame absolute inset-x-0 bottom-[18.5rem] h-[58vw] overflow-hidden lg:hidden ${shown}`}>
+          <Image
+            src={frame.src}
+            alt={alt}
+            width={3872}
+            height={2722}
+            className="absolute top-[-22vw] left-1/2 h-auto w-[118%] max-w-none -translate-x-1/2"
+          />
+        </div>
+        <FramePlate
+          frame={frame}
+          alt={alt}
+          className={`flight-frame hidden object-cover lg:block ${active ? "scale-100 opacity-100" : "scale-105 opacity-0"}`}
+        />
+      </>
+    );
+  }
 
+  const mobileFocus =
+    frame.id === "IMG-04" || frame.id === "IMG-06"
+      ? "max-lg:object-[72%_center]"
+      : frame.id === "IMG-05"
+        ? "max-lg:object-center"
+        : "";
+  const frameClass = `flight-frame object-cover ${mobileFocus} ${active ? "scale-100 opacity-100" : "scale-105 opacity-0"}`;
   return <FramePlate frame={frame} alt={alt} priority={frame.id === "IMG-01"} className={frameClass} />;
 }
 
@@ -130,7 +157,7 @@ function StackedFlight({ t }: { t: HomeTranslator }) {
           alt={t(HERO_OBJECT.altKey)}
           width={1500}
           height={1000}
-          className="flight-object pointer-events-none absolute top-[22%] right-[-22%] z-[2] w-[38vw] max-w-[168px] lg:top-16 lg:right-[-3%] lg:w-[min(42vw,680px)] lg:max-w-none"
+          className="flight-object pointer-events-none absolute bottom-[6vw] right-[-40%] z-[2] w-[195vw] max-w-none rotate-[22deg] lg:bottom-auto lg:top-16 lg:right-[-3%] lg:w-[min(42vw,680px)] lg:rotate-0"
         />
         <div className="container-site relative h-full min-h-dvh">
           <HeroCopy t={t} />
@@ -141,14 +168,18 @@ function StackedFlight({ t }: { t: HomeTranslator }) {
           key={frame.id}
           id={FLIGHT_SECTION_IDS[index + 1]}
           data-section={FLIGHT_SECTION_IDS[index + 1]}
-          className="scroll-mt-20 border-t border-line"
+          className={`scroll-mt-20 border-t border-line ${frame.id === "IMG-03" ? "max-lg:border-transparent max-lg:bg-black" : ""}`}
         >
           <Image
             src={frame.src}
             alt={t(frame.altKey)}
-            width={1600}
-            height={900}
-            className="aspect-video w-full object-cover"
+            width={frame.id === "IMG-03" ? 3872 : 1600}
+            height={frame.id === "IMG-03" ? 2722 : 900}
+            className={
+              frame.id === "IMG-03"
+                ? "h-auto w-full bg-black object-contain lg:aspect-video lg:object-cover"
+                : "aspect-video w-full object-cover"
+            }
           />
           <div className="container-site py-12">
             <ChapterCopy chapterKey={CHAPTER_KEYS[index]} t={t} />
@@ -222,8 +253,8 @@ export function LandingFlight() {
   const frames: LandingFrame[] = [HERO_PLATE, ...FLIGHT_FRAMES];
 
   return (
-    <div id="vuelo" className="flight-track max-lg:-mt-14">
-      <div className="flight-stage bg-surface">
+    <div id="vuelo" className="flight-track -mt-[60px] lg:-mt-20">
+      <div className={`flight-stage ${active === 1 ? "max-lg:bg-black lg:bg-surface" : "bg-surface"}`}>
         {frames.map((frame, index) => (
           <Still
             key={frame.id}
@@ -232,9 +263,22 @@ export function LandingFlight() {
             active={active === index}
           />
         ))}
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-surface via-surface/30 via-[34%] to-transparent to-[68%]" />
+        <div
+          className={`pointer-events-none absolute inset-0 bg-gradient-to-t from-surface via-surface/30 via-[34%] to-transparent to-[68%] ${
+            active === 1 ? "max-lg:opacity-0" : ""
+          }`}
+        />
+        <div
+          className={`pointer-events-none absolute inset-0 bg-gradient-to-t from-black via-black via-[20rem] to-transparent to-[27rem] transition-opacity duration-300 lg:hidden ${
+            active === 1 ? "opacity-100" : "opacity-0"
+          }`}
+        />
         <div className="pointer-events-auto absolute inset-0">
-          <div className="container-site flex h-auto min-h-full items-end lg:h-full">
+          <div
+            className={`container-site flex h-auto min-h-full min-w-0 items-end lg:h-full ${
+              active === 1 ? "max-lg:pb-16" : ""
+            }`}
+          >
             {active === 0 ? <HeroCopy t={t} /> : <ChapterCopy chapterKey={CHAPTER_KEYS[active - 1]} t={t} />}
           </div>
         </div>
@@ -243,7 +287,7 @@ export function LandingFlight() {
           alt=""
           width={1500}
           height={1000}
-          className={`flight-launch flight-object pointer-events-none absolute top-[22%] right-[-22%] z-[2] w-[38vw] max-w-[168px] lg:top-16 lg:right-[-3%] lg:w-[min(42vw,680px)] lg:max-w-none ${
+          className={`flight-launch flight-object pointer-events-none absolute bottom-[6vw] right-[-40%] z-[2] w-[195vw] max-w-none rotate-[22deg] lg:bottom-auto lg:top-16 lg:right-[-3%] lg:w-[min(42vw,680px)] lg:rotate-0 ${
             active === 0 ? "opacity-100 [--flight-x:0vw] [--flight-y:0vh]" : "opacity-0 [--flight-x:-34vw] [--flight-y:-42vh]"
           }`}
         />

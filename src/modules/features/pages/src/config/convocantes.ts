@@ -255,8 +255,8 @@ export const CONVOCANTES: Convocante[] = [
     shortName: "Clúster de Startups",
     sector: "privado",
     logo: "/convocantes/csi.png",
-    width: 423,
-    height: 140,
+    width: 935,
+    height: 382,
     wide: true,
     links: [
       { network: "web", href: "https://www.clusterdestartups.org/" },

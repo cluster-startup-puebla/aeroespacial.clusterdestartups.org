@@ -20,6 +20,7 @@ export function Header() {
     pathname === "/es" || pathname === "/en" || pathname === "/es/" || pathname === "/en/";
   const [open, setOpen] = useState(false);
   const [overFlight, setOverFlight] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const flight = document.getElementById("vuelo");
@@ -32,6 +33,23 @@ export function Header() {
     );
     observer.observe(flight);
     return () => observer.disconnect();
+  }, [pathname]);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const hero = document.querySelector<HTMLElement>("#vuelo [data-flight-sentinel]");
+      if (!hero) {
+        setScrolled(window.scrollY > 12);
+        return;
+      }
+      const mid = window.innerHeight / 2;
+      const box = hero.getBoundingClientRect();
+      const onHero = box.top <= mid && box.bottom > mid;
+      setScrolled(!onHero);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, [pathname]);
 
   const isActive = (href: string) => {
@@ -48,16 +66,16 @@ export function Header() {
         {t("skipToContent")}
       </a>
 
-      <header
-        className={`sticky top-0 z-50 ${
-          overFlight
-            ? "border-transparent bg-transparent"
-            : "border-b border-line bg-surface/90 backdrop-blur-md"
-        }`}
-      >
-        <div className="container-site flex items-center justify-between gap-4 py-3">
-          <Link href="/" aria-label={t("home")} className="h-8 sm:h-9">
-            <Logo label={brand("name")} className="h-full w-auto" />
+      <header className="sticky top-0 z-50 px-3 pt-2 pb-2 lg:px-6 lg:pt-3 lg:pb-3">
+        <div
+          className={`mx-auto flex h-11 items-center justify-between gap-3 rounded-full border px-3 transition-[background-color,border-color,box-shadow] duration-300 ease-out motion-reduce:transition-none lg:h-14 lg:w-[min(100%,72rem)] lg:gap-6 lg:px-5 ${
+            scrolled || !overFlight
+              ? "border-line bg-surface/90 shadow-lg backdrop-blur-md"
+              : "border-transparent bg-transparent shadow-none"
+          }`}
+        >
+          <Link href="/" aria-label={t("home")} className="flex min-w-0 items-center">
+            <Logo label={brand("name")} compact className="w-auto whitespace-nowrap" />
           </Link>
 
           <nav className="hidden lg:block" aria-label={t("label")}>
@@ -90,7 +108,7 @@ export function Header() {
             <LocaleSwitcher />
             <button
               type="button"
-              className="rounded-md border border-line p-2 text-ink lg:hidden"
+              className="rounded-full border border-line p-2 text-ink lg:hidden"
               aria-expanded={open}
               aria-controls="mobile-nav"
               aria-label={open ? t("close") : t("open")}
@@ -104,7 +122,7 @@ export function Header() {
         {open && (
           <nav
             id="mobile-nav"
-            className="mx-3 mb-3 rounded-md border border-line bg-surface lg:hidden"
+            className="absolute inset-x-3 top-full z-50 mt-2 rounded-3xl border border-line bg-surface shadow-lg lg:hidden"
             aria-label={t("label")}
           >
             <div className="px-4 pt-4">
