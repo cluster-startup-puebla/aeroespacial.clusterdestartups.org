@@ -130,7 +130,7 @@ function StackedFlight({ t }: { t: HomeTranslator }) {
           alt={t(HERO_OBJECT.altKey)}
           width={1500}
           height={1000}
-          className="flight-object pointer-events-none absolute top-16 right-[-3%] hidden w-[min(42vw,680px)] lg:block"
+          className="flight-object pointer-events-none absolute top-[22%] right-[-22%] z-[2] w-[38vw] max-w-[168px] lg:top-16 lg:right-[-3%] lg:w-[min(42vw,680px)] lg:max-w-none"
         />
         <div className="container-site relative h-full min-h-dvh">
           <HeroCopy t={t} />
@@ -243,7 +243,7 @@ export function LandingFlight() {
           alt=""
           width={1500}
           height={1000}
-          className={`flight-launch flight-object pointer-events-none absolute top-16 right-[-3%] z-[2] hidden w-[min(42vw,680px)] lg:block ${
+          className={`flight-launch flight-object pointer-events-none absolute top-[22%] right-[-22%] z-[2] w-[38vw] max-w-[168px] lg:top-16 lg:right-[-3%] lg:w-[min(42vw,680px)] lg:max-w-none ${
             active === 0 ? "opacity-100 [--flight-x:0vw] [--flight-y:0vh]" : "opacity-0 [--flight-x:-34vw] [--flight-y:-42vh]"
           }`}
         />
