@@ -282,22 +282,26 @@ function EventRow({
   labels: EventFactLabels & { location: string };
 }) {
   return (
-    <Link
-      href={`/calendario/${event.slug}`}
-      className="flex items-start gap-4 rounded-lg border border-line bg-surface-subtle px-4 py-4 transition hover:bg-elevated focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-    >
+    <article className="relative flex items-start gap-4 rounded-lg border border-line bg-surface-subtle px-4 py-4 transition hover:bg-elevated">
       <div className="min-w-0 flex-1">
-      <EventFacts event={event} locale={locale} today={today} labels={labels} />
-      <h2 className="mt-2 font-display text-body font-medium tracking-tight text-ink">{event.title}</h2>
-      <p className="mt-1 line-clamp-2 text-small text-ink-secondary">{event.description}</p>
-      {event.location && (
-        <p className="mt-3 flex items-center gap-2 text-small text-ink-muted">
-          <MapPin size={14} aria-hidden="true" />
-          <span>
-            {labels.location}: {event.location}
-          </span>
-        </p>
-      )}
+        <EventFacts event={event} locale={locale} today={today} labels={labels} />
+        <h2 className="mt-2 font-display text-body font-medium tracking-tight text-ink">
+          <Link
+            href={`/calendario/${event.slug}`}
+            className="outline-none after:absolute after:inset-0 focus-visible:after:outline focus-visible:after:outline-2 focus-visible:after:outline-offset-2 focus-visible:after:outline-accent"
+          >
+            {event.title}
+          </Link>
+        </h2>
+        <p className="mt-1 line-clamp-2 text-small text-ink-secondary">{event.description}</p>
+        {event.location && (
+          <p className="mt-3 flex items-center gap-2 text-small text-ink-muted">
+            <MapPin size={14} aria-hidden="true" />
+            <span>
+              {labels.location}: {event.location}
+            </span>
+          </p>
+        )}
       </div>
       {event.image && (
         <Image
@@ -308,6 +312,6 @@ function EventRow({
           className="h-28 w-20 shrink-0 bg-surface object-contain"
         />
       )}
-    </Link>
+    </article>
   );
 }

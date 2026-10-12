@@ -97,7 +97,7 @@ function OrganizerMarkView({ mark, size }: { mark: OrganizerMark; size: "detail"
     <Link
       href={`/${mark.id}`}
       aria-label={mark.name}
-      className="inline-flex rounded-sm outline-none transition hover:opacity-70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink"
+      className="relative z-10 inline-flex rounded-sm outline-none transition hover:opacity-70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink"
     >
       {visual}
     </Link>
