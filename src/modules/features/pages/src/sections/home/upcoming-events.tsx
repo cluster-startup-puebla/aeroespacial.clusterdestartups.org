@@ -9,10 +9,14 @@ interface UpcomingEventsProps {
   ctaLabel: string;
   emptyLabel: string;
   locale: string;
+  today: string;
   events: ClusterEvent[];
   labels: {
     location: string;
     details: string;
+    statusPast: string;
+    statusUpcoming: string;
+    statusLive: string;
   };
 }
 
@@ -23,11 +27,16 @@ export function UpcomingEvents({
   ctaLabel,
   emptyLabel,
   locale,
+  today,
   events,
   labels,
 }: UpcomingEventsProps) {
   return (
-    <section className="border-y border-line bg-surface-subtle py-16 lg:py-24">
+    <section
+      id="agenda"
+      data-section="agenda"
+      className="scroll-mt-20 border-y border-line bg-surface-subtle py-16 lg:py-24"
+    >
       <div className="container-site">
         <SectionHeader eyebrow={eyebrow} title={title} description={description} />
 
@@ -36,7 +45,7 @@ export function UpcomingEvents({
         ) : (
           <div className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {events.map((event) => (
-              <EventCard key={event.slug} event={event} locale={locale} labels={labels} />
+              <EventCard key={event.slug} event={event} locale={locale} today={today} labels={labels} />
             ))}
           </div>
         )}

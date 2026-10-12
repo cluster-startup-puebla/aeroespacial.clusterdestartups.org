@@ -2,14 +2,28 @@
   "Calendario": {
     "title": "Calendario",
     "metaTitle": "Calendario de eventos aeroespaciales",
-    "description": "Meetups, congresos y convocatorias del ecosistema aeroespacial.",
+    "description": "Eventos del ecosistema aeroespacial.",
     "upcomingTitle": "Próximos eventos",
     "empty": "No hay eventos programados por ahora.",
     "prevMonth": "Mes anterior",
     "nextMonth": "Mes siguiente",
     "hasEvents": "eventos",
+    "hasEvent": "evento",
     "location": "Sede",
     "details": "Más información",
-    "today": "Hoy"
+    "today": "Hoy",
+    "all": "Todos",
+    "upcoming": "Próximos",
+    "past": "Pasados",
+    "emptyPast": "No hay eventos anteriores.",
+    "emptyDay": "No hay eventos este día.",
+    "show": "Mostrar",
+    "backToCalendar": "Volver al calendario",
+    "visitSite": "Ir al sitio del evento",
+    "directions": "Cómo llegar",
+    "viewResult": "Ver resultado",
+    "statusPast": "Pasado",
+    "statusUpcoming": "Próximamente",
+    "statusLive": "Ocurriendo"
   }
 }

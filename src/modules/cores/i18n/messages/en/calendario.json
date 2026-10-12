@@ -2,14 +2,28 @@
   "Calendario": {
     "title": "Calendar",
     "metaTitle": "Aerospace events calendar",
-    "description": "Meetups, congresses and calls from the aerospace ecosystem.",
+    "description": "Events from the aerospace ecosystem.",
     "upcomingTitle": "Upcoming events",
     "empty": "There are no scheduled events right now.",
     "prevMonth": "Previous month",
     "nextMonth": "Next month",
     "hasEvents": "events",
+    "hasEvent": "event",
     "location": "Venue",
     "details": "More information",
-    "today": "Today"
+    "today": "Today",
+    "all": "All",
+    "upcoming": "Upcoming",
+    "past": "Past",
+    "emptyPast": "There are no past events.",
+    "emptyDay": "There are no events on this day.",
+    "show": "Show",
+    "backToCalendar": "Back to the calendar",
+    "visitSite": "Go to the event site",
+    "directions": "Get directions",
+    "viewResult": "See the result",
+    "statusPast": "Past",
+    "statusUpcoming": "Coming up",
+    "statusLive": "Happening"
   }
 }
