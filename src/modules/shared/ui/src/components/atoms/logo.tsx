@@ -3,9 +3,11 @@ interface LogoProps {
   className?: string;
   /** Phone wordmark. Desktop stays at the heading size. */
   compact?: boolean;
+  /** Diamond only. The name stays available to assistive tech. */
+  markOnly?: boolean;
 }
 
-export function Logo({ label, className = "", compact = false }: LogoProps) {
+export function Logo({ label, className = "", compact = false, markOnly = false }: LogoProps) {
   return (
     <span
       className={`inline-flex items-center font-display font-bold text-ink ${
@@ -20,7 +22,7 @@ export function Logo({ label, className = "", compact = false }: LogoProps) {
           compact ? "h-2 w-2 lg:h-3 lg:w-3" : "h-3 w-3"
         }`}
       />
-      {label}
+      {markOnly ? <span className="sr-only">{label}</span> : label}
     </span>
   );
 }

@@ -11,19 +11,19 @@ import {
   type Sector,
 } from "@/modules/features/pages/src/config/convocantes";
 
-/** 90% of h-7, h-8, h-10 and h-16. */
+/** Desktop marks sit a step under the old h-7 / h-8 / h-10 / h-16 scale. */
 const MARK_CLASS = {
-  compact: "h-[1.8rem] w-auto object-contain lg:h-[1.8rem] lg:max-h-[1.8rem] lg:w-auto",
-  quiet: "h-[1.575rem] w-auto object-contain lg:h-[1.575rem] lg:max-h-[1.575rem] lg:w-auto",
-  seal: "h-[1.8rem] w-auto object-contain lg:h-[3.6rem] lg:max-h-[3.6rem] lg:w-auto",
-  plate: "h-[1.8rem] w-auto object-contain lg:h-auto lg:max-h-[2.25rem] lg:w-auto lg:max-w-full",
+  compact: "h-[1.8rem] w-auto object-contain lg:h-[1.5rem] lg:max-h-[1.5rem] lg:w-auto",
+  quiet: "h-[1.575rem] w-auto object-contain lg:h-[1.35rem] lg:max-h-[1.35rem] lg:w-auto",
+  seal: "h-[1.8rem] w-auto object-contain lg:h-[3rem] lg:max-h-[3rem] lg:w-auto",
+  plate: "h-[1.8rem] w-auto object-contain lg:h-auto lg:max-h-[1.9rem] lg:w-auto lg:max-w-full",
 } as const;
 
 const SLOT_CLASS = {
-  compact: "lg:h-[1.8rem]",
-  quiet: "lg:h-[1.575rem]",
-  seal: "lg:h-[3.6rem]",
-  plate: "lg:h-[2.25rem]",
+  compact: "lg:h-[1.5rem]",
+  quiet: "lg:h-[1.35rem]",
+  seal: "lg:h-[3rem]",
+  plate: "lg:h-[1.9rem]",
 } as const;
 
 /** Two rows: private beside civil society, academia beside government. */
@@ -165,7 +165,7 @@ function SectorBlock({
   return (
     <div className={`w-full lg:w-auto ${offset ? "lg:ml-10" : ""}`}>
       <p className="text-micro uppercase tracking-[0.08em] text-ink-muted">{t(`sectors.${sector}`)}</p>
-      <div className="mt-2 grid grid-cols-2 gap-2 lg:mt-3 lg:flex lg:h-[3.6rem] lg:flex-wrap lg:items-center lg:gap-x-6 lg:gap-y-3">
+      <div className="mt-2 grid grid-cols-2 gap-2 lg:mt-2 lg:flex lg:h-[3rem] lg:flex-wrap lg:items-center lg:gap-x-5 lg:gap-y-2">
         {slots}
       </div>
     </div>
@@ -184,7 +184,7 @@ export function ConvenerWall() {
           <PhoneSectorLine key={sector} sector={sector} locale={locale} />
         ))}
       </div>
-      <div className="mt-4 hidden border-t border-line pt-3 xl:mt-6 xl:block xl:pt-4">
+      <div className="mt-4 hidden border-t border-line pt-3 xl:mt-14 xl:block xl:pt-5">
         <p className="text-micro font-medium uppercase tracking-[0.16em] text-ink">
           {t("hero.conveners")}
         </p>

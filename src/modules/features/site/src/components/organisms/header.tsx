@@ -83,7 +83,7 @@ export function Header() {
           }`}
         >
           <Link href="/" aria-label={t("home")} className="flex min-w-0 items-center">
-            <Logo label={brand("name")} compact className="w-auto whitespace-nowrap" />
+            <Logo label={brand("name")} compact markOnly className="w-auto" />
           </Link>
 
           <nav className="hidden lg:block" aria-label={t("label")}>

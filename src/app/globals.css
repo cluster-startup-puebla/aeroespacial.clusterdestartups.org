@@ -37,10 +37,10 @@
   --font-display: var(--font-schibsted), "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-body: var(--font-schibsted), "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-  --text-place: clamp(4.5rem, 14vw, 11rem);
-  --text-place--line-height: 0.9;
+  --text-place: clamp(2.35rem, 4.6vw, 4.5rem);
+  --text-place--line-height: 0.95;
   --text-place--font-weight: 500;
-  --text-place--letter-spacing: -0.045em;
+  --text-place--letter-spacing: -0.04em;
 
   --text-display: 3.5rem;
   --text-display--line-height: 1.05;
@@ -77,6 +77,7 @@
   --animate-allies: allies-scroll 48s linear infinite;
   --animate-axis-ring: axis-ring 4.2s cubic-bezier(0.22, 1, 0.36, 1) infinite;
   --animate-axis-rise: axis-rise 4.8s ease-in-out infinite;
+  --animate-scroll-cue: scroll-cue 1.6s ease-in-out infinite;
 }
 
 @keyframes allies-scroll {
@@ -106,6 +107,20 @@
   }
   50% {
     transform: translateY(-4px);
+  }
+}
+
+@keyframes scroll-cue {
+  0% {
+    transform: translateY(0) rotate(45deg);
+    opacity: 0.2;
+  }
+  45% {
+    opacity: 0.95;
+  }
+  100% {
+    transform: translateY(3px) rotate(45deg);
+    opacity: 0.2;
   }
 }
 

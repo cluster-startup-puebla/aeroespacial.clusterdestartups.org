@@ -24,10 +24,10 @@ function HeroCopy({ t }: { t: HomeTranslator }) {
   const locale = useLocale();
 
   return (
-    <div className="flex h-auto min-h-full w-full min-w-0 flex-col justify-between pt-20 pb-10 lg:h-full lg:py-20">
+    <div className="flex h-auto min-h-full w-full min-w-0 flex-col justify-between pt-20 pb-10 lg:h-full lg:pt-20 lg:pb-8">
       <div className="max-w-3xl">
         <p className="text-micro font-medium uppercase tracking-[0.14em] text-ink-muted">{t("hero.eyebrow")}</p>
-        <h1 className="mt-4 font-display text-place text-ink lg:mt-8">{t("hero.title")}</h1>
+        <h1 className="mt-4 whitespace-pre-line font-display text-place text-ink lg:mt-8">{t("hero.title")}</h1>
         <p className="mt-6 hidden max-w-xl text-body-lg text-ink-secondary lg:block">{t("hero.description")}</p>
         <div className="mt-5 lg:mt-8">
           <div className="lg:hidden">
@@ -52,7 +52,12 @@ function HeroCopy({ t }: { t: HomeTranslator }) {
       </div>
       <div className="w-full min-w-0">
         <ConvenerWall />
-        <p className="mt-2 text-center text-micro font-medium uppercase tracking-[0.14em] text-ink-muted lg:mt-6">
+        <p className="mt-2 flex flex-col items-center text-micro font-medium uppercase tracking-[0.14em] text-ink-muted lg:mt-4">
+          <span aria-hidden="true" className="mb-1.5 flex flex-col items-center gap-0.5 text-ink-muted">
+            <span className="animate-scroll-cue block size-2 border-r border-b border-current motion-reduce:animate-none motion-reduce:opacity-70" />
+            <span className="animate-scroll-cue block size-2 border-r border-b border-current [animation-delay:180ms] motion-reduce:animate-none motion-reduce:opacity-50" />
+            <span className="animate-scroll-cue block size-2 border-r border-b border-current [animation-delay:360ms] motion-reduce:animate-none motion-reduce:opacity-30" />
+          </span>
           {t("hero.scroll")}
         </p>
       </div>
