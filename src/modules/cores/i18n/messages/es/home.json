@@ -43,14 +43,14 @@
       "c1": {
         "index": "01",
         "eyebrow": "10 de octubre de 2026",
-        "title": "El acto",
-        "body": "En la UPAEP se cerró la Semana Mundial del Espacio, empezó el Año Espacial y se entregó el Cohete Antorcha."
+        "title": "Cierre Semana Mundial del Espacio México 2026",
+        "body": "En UPAEP, se dio clausura a la Semana Mundial del Espacio México 2026 y se entregó el Cohete conmemorativo para dar inicio al primer Año Espacial México en el Estado de Puebla."
       },
       "c2": {
         "index": "02",
-        "eyebrow": "Manifiesto",
-        "title": "Una alianza que abre el camino",
-        "body": "Doce convocantes invitan a más voluntades. Ninguno es dueño del Pacto. Quien se suma participa en la redacción, en igualdad."
+        "eyebrow": "Convocatoria abierta",
+        "title": "Manifiesto",
+        "body": "La triple hélice convoca a sumar esfuerzos por el desarrollo de una nueva estrategia para el Estado de Puebla."
       },
       "c3": {
         "index": "03",
@@ -72,8 +72,7 @@
       }
     },
     "tagline": {
-      "line1": "Puebla entra a la cadena de valor aeroespacial.",
-      "line2": "Ninguna institución lo logra sola."
+      "line1": "Puebla busca construir la cadena de valor aeroespacial."
     },
     "axes": {
       "eyebrow": "Acuerdo tercero",
@@ -92,7 +91,7 @@
         "a3": {
           "index": "03",
           "title": "Emprendimiento en space tech",
-          "body": "Convertir proyectos científicos y tecnológicos en startups con modelo de negocio."
+          "body": "Convertir ciencia e investigación espacial en emprendimientos tecnológicos."
         },
         "a4": {
           "index": "04",
@@ -114,8 +113,8 @@
         "body": "Emisión del Manifiesto y apertura de la convocatoria."
       },
       "d2": {
-        "date": "13 de noviembre de 2026",
-        "body": "Límite para adherirse y quedar en la firma."
+        "date": "13 de noviembre",
+        "body": "Fecha límite para adherirse al pacto."
       },
       "d3": {
         "date": "30 de noviembre de 2026",

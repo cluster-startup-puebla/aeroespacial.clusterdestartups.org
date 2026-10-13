@@ -46,7 +46,6 @@ export function TaglineReveal() {
     <section id="lema" data-section="lema" className="scroll-mt-20 py-24 lg:py-32">
       <h2 className="container-site max-w-3xl font-display text-h1 text-balance">
         <Line text={t("tagline.line1")} />
-        <Line text={t("tagline.line2")} />
       </h2>
     </section>
   );

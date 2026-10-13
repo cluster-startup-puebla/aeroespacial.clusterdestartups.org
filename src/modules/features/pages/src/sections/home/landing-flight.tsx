@@ -14,8 +14,8 @@ import {
 } from "@/modules/features/pages/src/config/frames";
 import { FLIGHT_SECTION_IDS } from "@/modules/features/pages/src/config/sections";
 
-const CHAPTER_KEYS = ["c1", "c2", "c3", "c4", "c5"] as const;
-const RAIL = ["00", "01", "02", "03", "04", "05"] as const;
+const CHAPTER_KEYS = ["c1", "c2"] as const;
+const RAIL = ["00", "01", "02"] as const;
 
 type ChapterKey = (typeof CHAPTER_KEYS)[number];
 type HomeTranslator = ReturnType<typeof useTranslations<"Home">>;

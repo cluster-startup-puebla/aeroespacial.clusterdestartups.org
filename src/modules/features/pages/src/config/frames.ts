@@ -28,8 +28,5 @@ export const HERO_OBJECT: LandingFrame = {
 
 export const FLIGHT_FRAMES: LandingFrame[] = [
   { id: "IMG-03", src: "/landing/img-03.webp", altKey: "frames.img03" },
-  { id: "IMG-04", src: "/landing/img-04.webp", altKey: "frames.img04" },
-  { id: "IMG-05", src: "/landing/img-05.webp", altKey: "frames.img05" },
-  { id: "IMG-06", src: "/landing/img-06.webp", altKey: "frames.img06" },
   { id: "IMG-07", src: "/landing/img-07.webp", altKey: "frames.img07" },
 ];

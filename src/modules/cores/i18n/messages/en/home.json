@@ -43,14 +43,14 @@
       "c1": {
         "index": "01",
         "eyebrow": "October 10, 2026",
-        "title": "The gathering",
-        "body": "At UPAEP, World Space Week closed, the Space Year began, and the Antorcha rocket was handed over."
+        "title": "Close of World Space Week Mexico 2026",
+        "body": "At UPAEP, World Space Week Mexico 2026 came to a close and the Commemorative Rocket was handed over to begin the first Mexico Space Year in the State of Puebla."
       },
       "c2": {
         "index": "02",
-        "eyebrow": "Manifesto",
-        "title": "An alliance that opens the path",
-        "body": "Twelve conveners invite more people in. No one owns the Pact. Whoever joins helps write it, on equal terms."
+        "eyebrow": "Open call",
+        "title": "Manifesto",
+        "body": "The triple helix calls for a joint effort to develop a new strategy for the State of Puebla."
       },
       "c3": {
         "index": "03",
@@ -72,8 +72,7 @@
       }
     },
     "tagline": {
-      "line1": "Puebla is joining the aerospace value chain.",
-      "line2": "No single institution can do this alone."
+      "line1": "Puebla is working to build the aerospace value chain."
     },
     "axes": {
       "eyebrow": "Third agreement",
@@ -92,7 +91,7 @@
         "a3": {
           "index": "03",
           "title": "Space tech entrepreneurship",
-          "body": "Turn scientific and technological projects into startups with a business model."
+          "body": "Turn space science and research into technology ventures."
         },
         "a4": {
           "index": "04",
@@ -114,8 +113,8 @@
         "body": "The Manifesto is issued and the call opens."
       },
       "d2": {
-        "date": "November 13, 2026",
-        "body": "Deadline to join and be included in the signing."
+        "date": "November 13",
+        "body": "Deadline to join the pact."
       },
       "d3": {
         "date": "November 30, 2026",

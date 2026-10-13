@@ -5,24 +5,16 @@ const AXES = ["a1", "a2", "a3", "a4", "a5"] as const;
 
 type AxisKey = (typeof AXES)[number];
 
-const SPANS: Record<AxisKey, string> = {
-  a1: "md:col-span-2 lg:col-span-4 lg:row-span-2",
-  a2: "lg:col-span-2",
-  a3: "lg:col-span-2",
-  a4: "lg:col-span-3",
-  a5: "lg:col-span-3",
-};
-
 function AxisMark({ axis }: { axis: AxisKey }) {
   if (axis === "a1") {
     return (
-      <div className="relative flex min-h-28 w-full flex-1 items-center justify-center">
-        <span aria-hidden className="absolute size-12 rounded-full border border-line lg:size-14" />
-        <span aria-hidden className="absolute size-20 rounded-full border border-line lg:size-24" />
-        <span aria-hidden className="absolute size-28 rounded-full border border-line lg:size-36" />
+      <div className="relative flex h-24 w-full items-center justify-center">
+        <span aria-hidden className="absolute size-8 rounded-full border border-line" />
+        <span aria-hidden className="absolute size-14 rounded-full border border-line" />
+        <span aria-hidden className="absolute size-20 rounded-full border border-line" />
         <span
           aria-hidden
-          className="absolute size-12 rounded-full border border-line motion-safe:animate-axis-ring lg:size-14"
+          className="absolute size-8 rounded-full border border-line motion-safe:animate-axis-ring"
         />
         <Telescope className="relative size-7 text-ink" strokeWidth={1.25} aria-hidden />
       </div>
@@ -31,7 +23,7 @@ function AxisMark({ axis }: { axis: AxisKey }) {
 
   if (axis === "a2") {
     return (
-      <div className="flex min-h-12 w-full flex-1 flex-col items-center justify-center gap-2">
+      <div className="flex h-24 w-full flex-col items-center justify-center gap-2">
         <Factory className="size-6 text-ink" strokeWidth={1.25} aria-hidden />
         <div className="flex w-full max-w-32 flex-col gap-1.5" aria-hidden>
           {["w-2/5", "w-3/5", "w-4/5"].map((width) => (
@@ -46,7 +38,7 @@ function AxisMark({ axis }: { axis: AxisKey }) {
 
   if (axis === "a3") {
     return (
-      <div className="flex min-h-12 w-full flex-1 flex-col items-center justify-center gap-2">
+      <div className="flex h-24 w-full flex-col items-center justify-center gap-2">
         <Rocket
           className="size-6 text-ink motion-safe:animate-axis-rise"
           strokeWidth={1.25}
@@ -59,13 +51,13 @@ function AxisMark({ axis }: { axis: AxisKey }) {
 
   if (axis === "a4") {
     return (
-      <div className="flex min-h-12 w-full flex-1 items-center justify-center gap-3">
+      <div className="flex h-24 w-full items-center justify-center gap-3">
         <span className="flex size-10 items-center justify-center rounded-md border border-line bg-surface">
           <GraduationCap className="size-5 text-ink" strokeWidth={1.25} aria-hidden />
         </span>
-        <span aria-hidden className="h-px w-10 bg-line sm:w-16" />
+        <span aria-hidden className="h-px w-6 bg-line" />
         <span aria-hidden className="size-1.5 rounded-full bg-ink" />
-        <span aria-hidden className="h-px w-10 bg-line sm:w-16" />
+        <span aria-hidden className="h-px w-6 bg-line" />
         <span className="flex size-10 items-center justify-center rounded-md border border-line bg-surface">
           <Factory className="size-5 text-ink" strokeWidth={1.25} aria-hidden />
         </span>
@@ -74,7 +66,7 @@ function AxisMark({ axis }: { axis: AxisKey }) {
   }
 
   return (
-    <div className="relative flex min-h-12 w-full flex-1 items-center justify-center">
+    <div className="relative flex h-24 w-full items-center justify-center">
       <span aria-hidden className="absolute size-14 rounded-full border border-line" />
       {[0, 1, 2].map((pulse) => (
         <span
@@ -95,20 +87,19 @@ export function Axes() {
   return (
     <section id="ejes" data-section="ejes" className="scroll-mt-20 py-16 lg:py-24">
       <div className="container-site">
-        <p className="text-micro font-medium uppercase tracking-[0.14em] text-ink-muted">{t("axes.eyebrow")}</p>
-        <h2 className="mt-4 max-w-3xl font-display text-h1 text-ink">{t("axes.title")}</h2>
-        <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-6">
+        <h2 className="max-w-3xl font-display text-h1 text-ink">{t("axes.title")}</h2>
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-5">
           {AXES.map((key) => (
             <article
               key={key}
-              className={`flex h-full flex-col overflow-hidden rounded-lg border border-line bg-surface-subtle p-5 ${SPANS[key]}`}
+              className="flex h-full flex-col overflow-hidden rounded-lg border border-line bg-surface-subtle p-5"
             >
               <AxisMark axis={key} />
               <div className="mt-4 border-t border-line pt-4">
                 <p className="text-micro font-medium uppercase tracking-[0.14em] text-ink-muted">
                   {t(`axes.items.${key}.index`)}
                 </p>
-                <h3 className={`mt-2 font-display text-ink ${key === "a1" ? "text-h3" : "text-h4"}`}>
+                <h3 className="mt-2 font-display text-h4 text-ink">
                   {t(`axes.items.${key}.title`)}
                 </h3>
                 <p className="mt-2 text-body text-ink-secondary">{t(`axes.items.${key}.body`)}</p>
