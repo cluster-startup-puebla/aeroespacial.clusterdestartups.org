@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Schibsted_Grotesk } from "next/font/google";
+import localFont from "next/font/local";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -10,9 +10,11 @@ import { Header } from "@/modules/features/site/src/components/organisms/header"
 import { Footer } from "@/modules/features/site/src/components/organisms/footer";
 import "../globals.css";
 
-const schibsted = Schibsted_Grotesk({
-  subsets: ["latin"],
-  weight: ["400", "500"],
+const schibsted = localFont({
+  src: [
+    { path: "../fonts/schibsted-grotesk-400.woff2", weight: "400", style: "normal" },
+    { path: "../fonts/schibsted-grotesk-500.woff2", weight: "500", style: "normal" },
+  ],
   variable: "--font-schibsted",
   display: "swap",
 });
