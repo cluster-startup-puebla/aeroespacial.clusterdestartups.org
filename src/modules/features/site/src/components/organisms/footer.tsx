@@ -37,9 +37,12 @@ export async function Footer() {
         </div>
       </div>
 
-      <div className="container-site mt-12 border-t border-line pt-6">
-        <p className="text-micro text-ink-muted">
-          © {new Date().getFullYear()} {t("name")} · {t("madeIn")}{" "}
+      <div className="container-site mt-12 grid gap-3 border-t border-line pt-6 text-micro text-ink-muted md:grid-cols-3 md:items-center">
+        <p>
+          © {new Date().getFullYear()} {t("name")} · {t("madeIn")}
+        </p>
+        <p className="md:text-center">{t("initiative")}</p>
+        <p className="md:text-right">
           <Link href="/aviso-de-privacidad" className="text-link underline underline-offset-4">
             {t("privacy")}
           </Link>

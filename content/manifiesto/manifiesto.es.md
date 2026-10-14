@@ -9,14 +9,6 @@ UPAEP, 10 de octubre de 2026.
 
 **Mtro. Héctor Guillermo Silva Galindo**
 
-Encargado de despacho de la Secretaría de Ciencia, Humanidades, Tecnología e Innovación del Gobierno del Estado de Puebla.
-
-Muy buenas tardes a todas y todos.
-
-Saludo con respeto a las autoridades universitarias, a las instituciones científicas, a los representantes de la industria, de las cámaras empresariales y de los clústeres, así como a las y los emprendedores y estudiantes que hoy nos acompañan.
-
-Agradezco a la UPAEP su hospitalidad y a quienes hicieron posible este cierre nacional de la Semana Mundial del Espacio.
-
 Este encuentro nos permite reconocer el talento que existe en Puebla y, sobre todo, asumir una responsabilidad compartida: trabajar juntos para convertir ese talento en oportunidades de desarrollo.
 
 Puebla cuenta con capacidades científicas, académicas e industriales que pueden abrirle nuevas puertas en el sector aeroespacial. Tenemos conocimiento, experiencia productiva y una comunidad emprendedora con ideas y determinación. Nuestro reto es articular esas fortalezas alrededor de un propósito común.

@@ -5,7 +5,8 @@
     "hero": {
       "eyebrow": "Space Year 2026–2027",
       "title": "Puebla\nen las estrellas",
-      "description": "<strong>World Space Week Mexico 2026</strong> closed on October 10 in the State of Puebla, and the <strong>Commemorative Rocket</strong> was handed over to begin the <strong>Mexico Space Year in Puebla 2026 - 2027</strong>.",
+      "lead": "On October 10, World Space Week closed in Puebla.",
+      "detail": "The Commemorative Rocket was handed over, and the Space Year began.",
       "primaryCta": "Join the pact",
       "scroll": "Scroll to enter",
       "conveners": "Convened by"

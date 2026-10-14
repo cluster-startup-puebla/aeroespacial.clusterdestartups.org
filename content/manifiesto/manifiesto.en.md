@@ -9,14 +9,6 @@ UPAEP, October 10, 2026.
 
 **Mtro. Héctor Guillermo Silva Galindo**
 
-Acting head of the Secretariat of Science, Humanities, Technology and Innovation of the Government of the State of Puebla.
-
-Good afternoon, everyone.
-
-I greet with respect the university authorities, the scientific institutions, the representatives of industry, of the business chambers and of the clusters, and the entrepreneurs and students who are with us today.
-
-I thank UPAEP for its hospitality and everyone who made this national closing of World Space Week possible.
-
 This gathering lets us recognize the talent that exists in Puebla and, above all, take on a shared responsibility: to work together so that talent becomes opportunities for development.
 
 Puebla has scientific, academic and industrial capacities that can open new doors in the aerospace sector. We have knowledge, productive experience and an entrepreneurial community with ideas and determination. Our challenge is to join those strengths around a common purpose.
