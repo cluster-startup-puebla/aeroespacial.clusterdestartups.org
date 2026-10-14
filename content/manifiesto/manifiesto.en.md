@@ -40,3 +40,5 @@ As we close this World Space Week, we open a new stage for Puebla: a stage to co
 Let us take on the commitment to collaborate with generosity, with responsibility and with results. Let us turn Puebla's capacities into new opportunities for the people of Puebla.
 
 Thank you.
+
+**For the love of Puebla, we are transforming on a grand scale**

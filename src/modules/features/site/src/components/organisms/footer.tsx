@@ -33,6 +33,16 @@ export async function Footer() {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link href="/aviso-de-privacidad" className="text-link underline underline-offset-4">
+                {t("privacy")}
+              </Link>
+            </li>
+            <li>
+              <Link href="/aviso-de-privacidad#uso" className="text-link underline underline-offset-4">
+                {t("dataUse")}
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
@@ -41,10 +51,26 @@ export async function Footer() {
         <p>
           © {new Date().getFullYear()} {t("name")} · {t("madeIn")}
         </p>
-        <p className="md:text-center">{t("initiative")}</p>
-        <p className="md:text-right">
+        <p className="md:text-center">
+          {t.rich("initiative", {
+            cluster: (chunks) => (
+              <a
+                href="https://clusterdestartups.org/"
+                target="_blank"
+                rel="noreferrer"
+                className="text-link underline underline-offset-4"
+              >
+                {chunks}
+              </a>
+            ),
+          })}
+        </p>
+        <p className="flex flex-wrap gap-x-4 md:justify-end">
           <Link href="/aviso-de-privacidad" className="text-link underline underline-offset-4">
             {t("privacy")}
+          </Link>
+          <Link href="/aviso-de-privacidad#uso" className="text-link underline underline-offset-4">
+            {t("dataUse")}
           </Link>
         </p>
       </div>

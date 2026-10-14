@@ -40,3 +40,5 @@ Al cerrar esta Semana Mundial del Espacio, abrimos una nueva etapa para Puebla: 
 Asumamos el compromiso de colaborar con generosidad, con responsabilidad y con resultados. Hagamos que las capacidades de Puebla se conviertan en nuevas oportunidades para las y los poblanos.
 
 Muchas gracias.
+
+**Por Amor a Puebla estamos Transformando en grande**

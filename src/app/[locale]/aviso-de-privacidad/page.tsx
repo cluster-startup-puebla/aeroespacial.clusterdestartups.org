@@ -39,7 +39,7 @@ export default async function PrivacyPage({ params }: { params: Promise<{ locale
       </header>
       <div className="mt-12 space-y-10">
         {SECTIONS.map((section) => (
-          <section key={section}>
+          <section key={section} id={section === "data" ? "uso" : undefined} className="scroll-mt-24">
             <h2 className="font-display text-h3 text-ink">{t(`${section}Title`)}</h2>
             <p className="mt-4 text-body text-ink-secondary">{t(section)}</p>
           </section>

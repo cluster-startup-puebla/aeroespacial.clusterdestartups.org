@@ -63,20 +63,19 @@ function HeroCopy({ t }: { t: HomeTranslator }) {
 
 function ChapterCopy({ chapterKey, t }: { chapterKey: ChapterKey; t: HomeTranslator }) {
   return (
-    <div className="max-w-xl pb-16 lg:pb-24">
+    <div className={`pb-16 lg:pb-24 ${chapterKey === "c2" ? "w-full" : "max-w-xl"}`}>
       <p className="text-micro font-medium uppercase tracking-[0.14em] text-ink-muted">
         {t(`chapters.${chapterKey}.eyebrow`)}
       </p>
-      {chapterKey === "c2" ? (
-        <Link
-          href="/manifiesto"
-          className="mt-5 inline-flex rounded-full border border-line px-4 py-2 text-small font-medium text-ink hover:bg-surface-subtle"
-        >
-          {t("cta.secondary")}
-        </Link>
-      ) : null}
-      <h2 className="mt-4 font-display text-h1 text-ink">{t(`chapters.${chapterKey}.title`)}</h2>
-      <p className="mt-4 text-body-lg text-ink-secondary">{t(`chapters.${chapterKey}.body`)}</p>
+      <div className="mt-4 flex items-baseline justify-between gap-6">
+        <h2 className="font-display text-h1 text-ink">{t(`chapters.${chapterKey}.title`)}</h2>
+        {chapterKey === "c2" ? (
+          <Link href="/manifiesto" className="shrink-0 text-small text-link underline underline-offset-4">
+            {t("cta.secondary")}
+          </Link>
+        ) : null}
+      </div>
+      <p className="mt-4 max-w-xl text-body-lg text-ink-secondary">{t(`chapters.${chapterKey}.body`)}</p>
     </div>
   );
 }
