@@ -27,10 +27,12 @@ function HeroCopy({ t }: { t: HomeTranslator }) {
       <div className="max-w-3xl">
         <p className="text-micro font-medium uppercase tracking-[0.14em] text-ink-muted">{t("hero.eyebrow")}</p>
         <h1 className="mt-4 whitespace-pre-line font-display text-place text-ink lg:mt-8">{t("hero.title")}</h1>
-        <div className="mt-8 hidden max-w-2xl space-y-3 lg:block">
-          <p className="text-body text-ink-secondary">{t("hero.lead")}</p>
-          <p className="text-body text-ink-secondary">{t("hero.detail")}</p>
-        </div>
+        <p className="mt-6 hidden max-w-xl text-body-lg text-ink-secondary lg:block">
+          {t.rich("hero.description", {
+            strong: (chunks) => <strong className="font-semibold text-ink">{chunks}</strong>,
+            br: () => <br />,
+          })}
+        </p>
         <div className="mt-5 lg:mt-8">
           <div className="lg:hidden">
             <PactCtas primary={t("cta.primary")} size="default" />
