@@ -1,0 +1,53 @@
+{
+  "Join": {
+    "open": "Súmate al pacto",
+    "metaTitle": "Súmate al Pacto",
+    "metaDescription": "Solicita tu adhesión al Pacto por el Desarrollo del Sector Aeroespacial en el Estado de Puebla.",
+    "eyebrow": "Adhesión",
+    "title": "Súmate al Pacto",
+    "intro": "Cuéntanos quién se suma. Al enviar, te llega por correo cómo redactar la carta, a quién va dirigida y en qué formato.",
+    "close": "Cerrar",
+    "organization": "Organización, dependencia, empresa o iniciativa",
+    "organizationType": "Tipo de organización",
+    "organizationTypePlaceholder": "Selecciona el tipo",
+    "representative": "Nombre del representante con capacidad jurídica",
+    "email": "Correo de contacto",
+    "phone": "Teléfono de contacto",
+    "interest": "Por qué quieren sumarse al Pacto",
+    "value": "Qué valor aportan al ecosistema aeroespacial",
+    "commitments": "Qué compromisos buscan asumir",
+    "privacy": "He leído el Aviso de Privacidad.",
+    "privacyLink": "Aviso de Privacidad",
+    "submit": "Enviar solicitud",
+    "sending": "Enviando…",
+    "required": "Completa este campo.",
+    "emailInvalid": "Escribe un correo válido.",
+    "phoneInvalid": "Escribe un teléfono de contacto.",
+    "short": "Escríbelo en unas líneas.",
+    "privacyRequired": "Para continuar, acepta que leíste el Aviso de Privacidad.",
+    "error": "No pudimos enviar la solicitud. Inténtalo de nuevo en un momento.",
+    "sentTitle": "Te enviamos las instrucciones",
+    "sentBody": "Revisa {email}, también la carpeta de correo no deseado. Ahí va el formato de la carta, dirigida al Clúster de Startups e Innovación. Para quedar en la firma del 30 de noviembre, envíala a más tardar el 13 de noviembre de 2026.",
+    "types": {
+      "research": "Centro de investigación",
+      "university": "Universidad",
+      "chamber": "Organismo empresarial",
+      "corporate": "Corporativo",
+      "private": "Iniciativa privada",
+      "government": "Dependencia gubernamental",
+      "initiative": "Iniciativa poblana"
+    },
+    "mail": {
+      "subject": "Cómo redactar tu carta de adhesión al Pacto",
+      "greeting": "Hola, {name}:",
+      "intro": "Recibimos el interés de {organization} por sumarse al Pacto por el Desarrollo del Sector Aeroespacial en el Estado de Puebla.",
+      "deadline": "Para quedar en la firma del 30 de noviembre de 2026, la carta firmada tiene que llegar en PDF, a más tardar el 13 de noviembre de 2026, a secretariado@clusterdestartups.org.",
+      "addressed": "La carta va dirigida a:",
+      "addressee": "Rodrigo Yamil Álvarez Moisés\nPresidente\nClúster de Startups e Innovación, A.C.\nPresente",
+      "formatTitle": "Formato:",
+      "format": "1. Lugar y fecha. Por ejemplo: Heroica Puebla de Zaragoza, a [día] de [mes] de 2026.\n2. El destinatario, tal como está arriba.\n3. Asunto: Adhesión al Pacto por el Desarrollo del Sector Aeroespacial en el Estado de Puebla.\n4. Quién escribe y a qué organización representa, con capacidad jurídica.\n5. Por qué quieren sumarse.\n6. Qué valor aportan al ecosistema aeroespacial.\n7. Qué compromisos buscan asumir.\n8. Cierre con «Atentamente», el nombre, el cargo y la firma.",
+      "draftTitle": "Esto es lo que escribiste. Puedes usarlo como base de la carta:",
+      "signoff": "La carta la firma quien puede representar a la organización."
+    }
+  }
+}

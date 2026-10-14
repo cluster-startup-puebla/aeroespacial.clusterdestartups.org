@@ -10,6 +10,8 @@ export const dynamic = "force-static";
 const ROUTES = [
   { path: "/", priority: 1, frequency: "weekly" as const },
   { path: "/manifiesto", priority: 0.9, frequency: "monthly" as const },
+  { path: "/formulario", priority: 0.8, frequency: "monthly" as const },
+  { path: "/aviso-de-privacidad", priority: 0.3, frequency: "yearly" as const },
   { path: "/blog", priority: 0.9, frequency: "weekly" as const },
   { path: "/calendario", priority: 0.9, frequency: "weekly" as const },
 ];

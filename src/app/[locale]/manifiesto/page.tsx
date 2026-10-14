@@ -51,7 +51,7 @@ export default async function ManifiestoPage({
         dangerouslySetInnerHTML={{ __html: doc.contentHtml }}
       />
       <div className="mt-12">
-        <PactCtas locale={locale} samePage={false} primary={home("cta.primary")} />
+        <PactCtas primary={home("cta.primary")} />
       </div>
     </article>
   );

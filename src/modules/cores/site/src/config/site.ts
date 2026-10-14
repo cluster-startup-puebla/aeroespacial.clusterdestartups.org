@@ -15,8 +15,11 @@ export const SHARE_IMAGE = {
   alt: SITE_NAME,
 } as const;
 
-/** Stays on the adhesion section until a real inbox exists. Do not invent an address. */
-export const ADHESION_HREF = "#adhesion";
+/**
+ * Inbox named in the cluster's own invitation letters.
+ * The adhesion form posts here; the first live submission must be confirmed in that inbox.
+ */
+export const ADHESION_INBOX = "secretariado@clusterdestartups.org";
 
 /** Absolute localized URL with the trailing slash `trailingSlash: true` expects. */
 export function localeUrl(locale: string, route = "/") {

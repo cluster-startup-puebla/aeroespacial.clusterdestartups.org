@@ -5,7 +5,7 @@
     "hero": {
       "eyebrow": "Space Year 2026–2027",
       "title": "Puebla\nen las estrellas",
-      "description": "World Space Week Mexico 2026 closed on October 10 in the State of Puebla, and the Commemorative Rocket was handed over to begin the Mexico Space Year in Puebla.",
+      "description": "<strong>World Space Week Mexico 2026</strong> closed on October 10 in the State of Puebla, and the <strong>Commemorative Rocket</strong> was handed over to begin the <strong>Mexico Space Year in Puebla 2026 - 2027</strong>.",
       "primaryCta": "Join the pact",
       "scroll": "Scroll to enter",
       "conveners": "Convened by"
@@ -90,7 +90,7 @@
         },
         "a3": {
           "index": "03",
-          "title": "Space tech entrepreneurship",
+          "title": "Space Tech entrepreneurship",
           "body": "Turn space science and research into technology ventures."
         },
         "a4": {
@@ -107,7 +107,7 @@
     },
     "route": {
       "eyebrow": "Route",
-      "title": "From the Manifesto to the signing",
+      "title": "From the Manifesto to the Pact",
       "d1": {
         "date": "October 10, 2026",
         "body": "The Manifesto is issued and the call opens."
@@ -124,24 +124,23 @@
     "adhesion": {
       "eyebrow": "Adhesion",
       "title": "Join the Pact",
-      "body": "Adhesion is in writing to the Startup and Innovation Cluster. Name a representative and a contribution. Prior aerospace experience is not required. To be included in the November 30 signing, the letter must arrive by November 13, 2026.",
-      "note": "The Manifesto is a statement of will. It creates no legal, financial, or budget obligations.",
+      "body": "Open call to research centers, universities, business organizations, corporations, the private sector, government agencies, and people from Puebla with the interest and capabilities to develop the aerospace sector in the State of Puebla.",
       "cta": "Join the pact"
     },
     "faq": {
       "title": "Questions",
-      "q1": "Does the Manifesto require me to put up money?",
-      "a1": "No. It creates no financial or budget obligations. If resources, facilities, or technology come later, that is formalized in a separate agreement.",
-      "q2": "Do I need aerospace experience to join?",
-      "a2": "No. What is required is the will to contribute from education, research, industry, a chamber, a cluster, or a community.",
-      "q3": "How long do I have to join?",
-      "a3": "Until November 13, 2026, if you want to be included in the November 30 signing.",
-      "q4": "Who is convening this?",
-      "a4": "UPAEP, SECIHTI Puebla, the Startup and Innovation Cluster, INAOE, the National Coordination of World Space Week, SEDETRA, CTS, the Central Zone Automotive Cluster, CANACINTRA Puebla, Sintonía, Yankuilotl, and REGENIA.",
-      "q5": "What happens on November 30?",
-      "a5": "The Pact for the Development of the Aerospace Sector in Puebla is signed and the Coordinating Committee is installed. Conveners and those who have joined take part.",
-      "q6": "Where do I see the year’s activities?",
-      "a6": "In the agenda on this page and in the site calendar. Notes live in the journal."
+      "q1": "What is the Pact?",
+      "a1": "The Pact for the Development of the Aerospace Sector in the State of Puebla brings government, academia, and industry together to build the state’s aerospace value chain. It is signed on November 30, 2026.",
+      "q2": "What does the Pact work on?",
+      "a2": "Five lines: science outreach, industry in Puebla, Space Tech entrepreneurship, talent aligned with industry, and links with the aerospace sector in Mexico and abroad.",
+      "q3": "Who can join the Pact?",
+      "a3": "Research centers, universities, business organizations, corporations, private companies, government agencies, and local initiatives in Puebla with the interest and capacity to develop the aerospace sector.",
+      "q4": "How do I join the Pact, and until when?",
+      "a4": "In “Join the pact” you say who is joining, name the representative, and what they bring. The email explains how to write the letter, addressed to the Startup and Innovation Cluster. To be included in the November 30 signing, the signed letter must arrive by November 13, 2026.",
+      "q5": "Who is convening the Pact?",
+      "a5": "The State Government, SEDETRA, SECIHTI Puebla, and CTS; federal Science and Technology with INAOE, UPAEP, BUAP, and Sintonía; World Space Week and REGENIA; the Startup and Innovation Cluster, the Automotive Cluster, CANACINTRA Puebla, and Yankuilotl.",
+      "q6": "What happens on November 30?",
+      "a6": "The Pact is signed and the Coordinating Committee is installed. Conveners and those who joined in time take part."
     },
     "posts": {
       "eyebrow": "Blog",

@@ -1,73 +1,50 @@
 ---
-title: Collaboration Manifesto toward the Pact
-description: Statement of October 10, 2026. Twelve conveners open the path to the Pact for the development of the aerospace sector in Puebla.
+title: Closing remarks of World Space Week
+description: Collaboration to advance the aerospace sector in Puebla. Remarks by Mtro. Héctor Guillermo Silva Galindo at UPAEP on October 10, 2026.
 ---
 
-*An alliance that calls for more wills.*
+*Collaboration to advance the aerospace sector in Puebla.*
 
-Convened by the Startup and Innovation Cluster, A.C., together with the other conveners. Puebla de Zaragoza, Puebla. October 10, 2026. Version 0.3.
+UPAEP, October 10, 2026.
 
-## Preamble
+**Mtro. Héctor Guillermo Silva Galindo**
 
-Within World Space Week 2026 and its national closing, held at UPAEP, the institutions, agencies, organizations, chambers and companies issuing this Manifesto, hereafter "THE CONVENERS", ally to call more wills to a common purpose: to bring Puebla into the aerospace value chain. THE CONVENERS are:
+Acting head of the Secretariat of Science, Humanities, Technology and Innovation of the Government of the State of Puebla.
 
-- Universidad Popular Autónoma del Estado de Puebla ("UPAEP"), through its Vice Rector for Research, Dra. Rosa María Cantón Croda, on behalf of the rector, Dr. Jorge Medina Delgadillo;
-- the Secretariat of Science, Humanities, Technology and Innovation of the Government of the State of Puebla ("SECIHTI PUEBLA"), through its acting head, Mtro. Héctor Guillermo Silva Galindo;
-- Clúster de Startups e Innovación, A.C. ("CSI"), represented by its president, Rodrigo Yamil Álvarez Moisés;
-- Instituto Nacional de Astrofísica, Óptica y Electrónica ("INAOE"), through its director general, Dr. David Sánchez de la Llave;
-- the National Coordination of World Space Week Mexico, through its president, Ing. Mario M. Arreola Santander;
-- the Secretariat of Economic Development and Labor of the Government of the State of Puebla ("SEDETRA"), through its representative, Lic. Marco Antonio Molina Sánchez;
-- Capital de la Tecnología y la Sostenibilidad ("CTS"), through its director general, Mtro. José Antonio Silva Hernández;
-- the Central Zone Automotive Cluster, represented by its director, Mtra. Mónica Doger Ramírez;
-- the National Chamber of the Transformation Industry in Puebla ("CANACINTRA PUEBLA"), through the President of its Automotive and Auto Parts Sector, Mtra. Victa Wewerinke;
-- Sintonía ("SINTONÍA"), through its president, José Pablo Nuño de la Parra;
-- Yankuilotl ("YANKUILOTL"), represented by Dr. Argel Vega;
-- the Network for the Generation of Knowledge and Open Innovation (REGENIA), represented by its president, Lic. Denzel Manuel Carrillo Tovar.
+Good afternoon, everyone.
 
-The conveners do not close this path: they open it. This Manifesto is the first stage of the process that will conclude with the signing of the **Pact for the Development of the Aerospace Sector in the State of Puebla** on November 30, 2026, in which THE CONVENERS will take part together with every will that has joined along the way.
+I greet with respect the university authorities, the scientific institutions, the representatives of industry, of the business chambers and of the clusters, and the entrepreneurs and students who are with us today.
 
-## Considering
+I thank UPAEP for its hospitality and everyone who made this national closing of World Space Week possible.
 
-That the aerospace sector is a high-value, knowledge-intensive industry; that Puebla has a consolidated industrial base, scientific and academic institutions in astronomy, optics, electronics and engineering, and an active business and entrepreneurial ecosystem, whose capacities today operate largely in isolation; and that no single institution can achieve this purpose alone: joining them requires government, academia, research, industry, chambers and the entrepreneurial ecosystem, and it is stronger the more wills join from the start.
+This gathering lets us recognize the talent that exists in Puebla and, above all, take on a shared responsibility: to work together so that talent becomes opportunities for development.
 
-## Agreements
+Puebla has scientific, academic and industrial capacities that can open new doors in the aerospace sector. We have knowledge, productive experience and an entrepreneurial community with ideas and determination. Our challenge is to join those strengths around a common purpose.
 
-### First. Convening alliance
+Under the leadership of Governor Alejandro Armenta, the State Government takes on the commitment to accompany this collaboration, to ease the links among those taking part and to contribute, within our powers, to a path that brings Puebla into the aerospace value chain.
 
-THE CONVENERS ally for one end: to invite more wills to build and sign the Pact. Each convener is also an inviter and commits to bring in their own circle of institutions, companies and communities; none owns the Pact, and those who join take part in its final drafting on equal terms.
+The manifesto that brings us together today states a conviction: this goal needs every one of us.
 
-### Second. Commitments
+Academia contributes education and knowledge; research centers, scientific and technological capacity; industry, experience and market opportunities; chambers and clusters, collaboration networks; entrepreneurs, new solutions; and government, institutional coordination so we can move forward together.
 
-Within their powers, THE CONVENERS commit to: (1) actively invite new universities, research centers, chambers, clusters, companies, organizations and communities; (2) make the draft Pact available and open it to their contributions; (3) steer the work toward the five lines described in the Third Agreement; and (4) sign the Pact on November 30, 2026, together with those who have joined.
+That is why I propose that we make this alliance a commitment to concrete work.
 
-### Third. Lines of work
+That we bring space science closer to our girls, boys and young people, to awaken new vocations.
 
-THE CONVENERS and those who join will steer their collaboration toward these five lines:
+That we accompany companies from Puebla as they identify opportunities to take part in this industry.
 
-**Line 1. Science outreach.** Bring space science and technology to the public and awaken scientific vocations.
+That we help turn scientific and technological projects into viable ventures.
 
-**Line 2. Reconfiguring industry in Puebla.** Bring Puebla industry into the aerospace value chain.
+That we strengthen the link between education and the needs of the productive sector.
 
-**Line 3. Space tech entrepreneurship.** Turn scientific and technological projects into startups with a business model.
+And that we connect Puebla with aerospace institutions, companies and networks in Mexico and around the world.
 
-**Line 4. Bringing education closer to private-sector needs.** Align talent formation and academic capacity with what industry needs.
+These five lines must become a shared agenda, with priorities, people in charge and follow-up. An agenda in which each institution finds a concrete way to contribute and in which we can recognize the progress of our work.
 
-**Line 5. National and international connection.** Connect Puebla's ecosystem with the aerospace sector in Mexico and abroad.
+Today we open a call. Let us invite more universities, research centers, companies and communities to join. The value of this alliance will grow with the diversity of its participants and with the will to build together.
 
-### Fourth. Adhesion
+As we close this World Space Week, we open a new stage for Puebla: a stage to connect knowledge with industry, talent with opportunity and innovation with wellbeing.
 
-Every higher-education institution, research center, agency, chamber, cluster, company, organization or community in Puebla that shares this purpose is invited; prior aerospace experience is not required, only the will to contribute. Adhesion is made in writing to the Startup and Innovation Cluster, naming a representative and a contribution, no later than November 13, 2026, to be included in the signing of the Pact.
+Let us take on the commitment to collaborate with generosity, with responsibility and with results. Let us turn Puebla's capacities into new opportunities for the people of Puebla.
 
-### Fifth. Representation
-
-Each convener or adherent takes part through its head or the person they designate; for the signing of the Pact, a letter or email of designation from the head, sent to the Cluster before the event, is enough. A change of representative does not change the institution's participation or its place among THE CONVENERS.
-
-### Sixth. Nature and use of names
-
-This Manifesto is a joint statement of will, public and non-binding; it creates no legal, financial or budget obligations, and the actions that follow from it will be carried out within each convener's powers and, if they involve resources, use of facilities or technology transfer, will be formalized in specific agreements; each convener keeps its autonomy. No convener will use another's name or logo without prior written authorization; communication will use a common identity agreed among THE CONVENERS.
-
-### Seventh. Route
-
-October 10: the Manifesto is issued and the call opens. From October 10 to November 13: invitations, adhesions and comments on the draft. On November 30 the Pact is signed and the Coordinating Committee is installed.
-
-This Manifesto is issued, as a statement of will, in Puebla de Zaragoza, Puebla, on the tenth day of October, two thousand twenty-six.
+Thank you.

@@ -1,0 +1,53 @@
+{
+  "Join": {
+    "open": "Join the Pact",
+    "metaTitle": "Join the Pact",
+    "metaDescription": "Request to join the Pact for the Development of the Aerospace Sector in the State of Puebla.",
+    "eyebrow": "Adhesion",
+    "title": "Join the Pact",
+    "intro": "Tell us who is joining. When you send this, the email explains how to write the letter, who it is addressed to, and the format.",
+    "close": "Close",
+    "organization": "Organization, agency, company, or initiative",
+    "organizationType": "Type of organization",
+    "organizationTypePlaceholder": "Select a type",
+    "representative": "Name of the representative with legal authority",
+    "email": "Contact email",
+    "phone": "Contact phone",
+    "interest": "Why you want to join the Pact",
+    "value": "What you bring to the aerospace ecosystem",
+    "commitments": "What commitments you intend to take on",
+    "privacy": "I have read the Privacy Notice.",
+    "privacyLink": "Privacy Notice",
+    "submit": "Send application",
+    "sending": "Sending…",
+    "required": "Fill in this field.",
+    "emailInvalid": "Enter a valid email.",
+    "phoneInvalid": "Enter a contact phone number.",
+    "short": "Write it in a few lines.",
+    "privacyRequired": "To continue, confirm that you read the Privacy Notice.",
+    "error": "We could not send the application. Try again in a moment.",
+    "sentTitle": "We sent the instructions",
+    "sentBody": "Check {email}, including the spam folder. The letter format is there, addressed to the Startup and Innovation Cluster. To be included in the November 30 signing, send it by November 13, 2026.",
+    "types": {
+      "research": "Research center",
+      "university": "University",
+      "chamber": "Business organization",
+      "corporate": "Corporation",
+      "private": "Private initiative",
+      "government": "Government agency",
+      "initiative": "Local initiative"
+    },
+    "mail": {
+      "subject": "How to write your letter of adhesion to the Pact",
+      "greeting": "Hello, {name}:",
+      "intro": "We received {organization}'s interest in joining the Pact for the Development of the Aerospace Sector in the State of Puebla.",
+      "deadline": "To be included in the signing on November 30, 2026, the signed letter must arrive as a PDF by November 13, 2026, at secretariado@clusterdestartups.org.",
+      "addressed": "Address the letter to:",
+      "addressee": "Rodrigo Yamil Álvarez Moisés\nPresidente\nClúster de Startups e Innovación, A.C.\nPresente",
+      "formatTitle": "Format:",
+      "format": "1. Place and date. For example: Heroica Puebla de Zaragoza, [day] of [month], 2026.\n2. The addressee, as written above.\n3. Subject: Adhesión al Pacto por el Desarrollo del Sector Aeroespacial en el Estado de Puebla.\n4. Who is writing and which organization they represent, with legal authority.\n5. Why they want to join.\n6. What they bring to the aerospace ecosystem.\n7. What commitments they intend to take on.\n8. Close with «Atentamente», the name, the role, and the signature.",
+      "draftTitle": "This is what you wrote. You can use it as the basis of the letter:",
+      "signoff": "The letter is signed by the person who can represent the organization."
+    }
+  }
+}

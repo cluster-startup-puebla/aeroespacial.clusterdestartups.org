@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { Link } from "@/modules/cores/i18n/src/config/routing";
 import { LocaleSwitcher } from "@/modules/cores/i18n/src/components/locale-switcher";
 import { PactCtas } from "@/modules/features/site/src/components/pact-ctas";
@@ -14,10 +14,7 @@ export function Header() {
   const t = useTranslations("Nav");
   const brand = useTranslations("Footer");
   const home = useTranslations("Home");
-  const locale = useLocale();
   const pathname = usePathname();
-  const samePage =
-    pathname === "/es" || pathname === "/en" || pathname === "/es/" || pathname === "/en/";
   const [open, setOpen] = useState(false);
   const [overFlight, setOverFlight] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -106,8 +103,6 @@ export function Header() {
           <div className="flex items-center gap-2">
             <div className="hidden lg:block">
               <PactCtas
-                locale={locale}
-                samePage={samePage}
                 primary={home("cta.primary")}
                 secondary={home("cta.secondary")}
                 size="compact"
@@ -135,8 +130,6 @@ export function Header() {
           >
             <div className="px-4 pt-4">
               <PactCtas
-                locale={locale}
-                samePage={samePage}
                 primary={home("cta.primary")}
                 secondary={home("cta.secondary")}
                 size="compact"
